@@ -80,6 +80,7 @@ def build_sorted_phrases(phrase_freq_dict):
     return sorted_phrase_dict
 
 
+# TODO: filter out candidates with c-value < threshold
 def calc_cvalue(sorted_phrase_dict):
     """ See:
 - Frantzi, Ananiadou, Mima (2000)- Automatic Recognition of Multi-Word Terms -
@@ -87,7 +88,7 @@ def calc_cvalue(sorted_phrase_dict):
 - Barrón-Cedeño, Sierra, Drouin, Ananiadou (2009)- An Improved Term Recognition
     Method for Spanish"""
     cvalue_dict = {}
-    triple_dict = {}  # 'candidate': (f(b), t(b), c(b))
+    triple_dict = {}  # 'candidate string': (f(b), t(b), c(b))
     max_num_words = max(sorted_phrase_dict.keys())
 
     # Longest candidates.
@@ -158,13 +159,21 @@ def main():
     # STEP 2: Order candidates first by number of words, then by frequency.
     sorted_phrases = build_sorted_phrases(accepted_phrases)
 
-    # STEP 3?
+    # STEP 3: Calculate c-value
     cvalue_output = calc_cvalue(sorted_phrases)
     for x in sorted(cvalue_output.items(),
                     key=lambda item: item[1], reverse=True):
         print x[0], x[1]
 
-    # TODO: test con ejemplo de juguete en Frantzi, et al (2000)
+    # TODO: test con ejemplo de juguete en Frantzi, et al (2000). Simplemente
+    # por rigurosidad, ya que los resultados son iguales a los de la
+    # implementación anterior, que pasaba el test.
+
+    # TODO: implementar funciones de precisión (por trechos) y cobertura.
+
+    # TODO: jugar con argumentos (patrón sintáctico, corte en lista de razones
+    # de probabilidades binomiales, threshold de frequencia, threshold de
+    # c-value, etc) y registrar valores de precisión y cobertura.
 
 
 if __name__ == '__main__':
