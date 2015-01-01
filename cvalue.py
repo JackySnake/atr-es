@@ -52,18 +52,12 @@ def binom_ratio_filter(candidate_freq_dict, cutoff):
     return dict(kept_phrases), dict(disc_phrases)
 
 
-def remove_postags(tagged_phrase):
-    clean_phrase = ' '.join([w.split('/')[0] for w in tagged_phrase.split()])
-    return clean_phrase
-
-
 # Remove POS tags from phrases (keys) and return dict.
-def build_cval_input(phrase_freq_dict):
+def remove_pos_tags(phrase_freq_dict):
     """docstring for candidate_freq_dict"""
     cval_input_dict = {}
     for phrase in phrase_freq_dict.keys():
-        #lema_phrase = ' '.join([w.split('/')[0] for w in phrase.split()])
-        lema_phrase = remove_postags(phrase)
+        lema_phrase = ' '.join([w.split('/')[0] for w in phrase.split()])
         cval_input_dict[lema_phrase] = phrase_freq_dict[phrase]
     return cval_input_dict
 
@@ -74,69 +68,103 @@ def remove_1word_candidates(phrase_freq_dict):
         (k, v) for k, v in phrase_freq_dict.items() if len(k.split()) > 1)
 
 
-def cvalue(freq_dict):
-    term_cvalue = {}
-    max_len_term = max(len(c.split()) for c in freq_dict.keys())
-    for tc in [c for c in freq_dict.keys() if len(c.split()) == max_len_term]:
-        cval = log(len(tc.split()), 2) * freq_dict[tc]
-        term_cvalue[tc] = cval
-    for term_len in reversed(range(1, max_len_term)):
-        for tc in [c for c in freq_dict.keys() if len(c.split()) == term_len]:
-            substring_of = [c for c in freq_dict.keys() if tc in c and tc != c]
-            if len(substring_of) > 0:
-                fa = freq_dict[tc]
-                PTa = len(set(substring_of))
-                fb = sum(freq_dict[c] for c in substring_of)
-                for lc in substring_of:
-                    for xc in [c for c in substring_of if lc != c]:
-                        if lc in xc:
-                            fb -= freq_dict[lc]
-                #cval = log(len(tc.split()), 2) * (fa - fb) / PTa)
-                cval = log(len(tc.split()), 2) * (fa - (1 / PTa * fb))  # same thing.
-                term_cvalue[tc] = cval
+def build_sorted_phrases(phrase_freq_dict):
+    """docstring for build_sorted_phrases"""
+    sorted_phrase_dict = defaultdict(list)
+    for phrs in phrase_freq_dict.items():
+        sorted_phrase_dict[len(phrs[0].split())].append(phrs)
+    for num_words in sorted_phrase_dict.keys():
+        sorted_phrase_dict[num_words] = sorted(sorted_phrase_dict[num_words],
+                                               key=lambda item: item[1],
+                                               reverse=True)
+    return sorted_phrase_dict
+
+
+def calc_cvalue(sorted_phrase_dict):
+    """ See:
+- Frantzi, Ananiadou, Mima (2000)- Automatic Recognition of Multi-Word Terms -
+    the C-value-NC-value Method
+- Barrón-Cedeño, Sierra, Drouin, Ananiadou (2009)- An Improved Term Recognition
+    Method for Spanish"""
+    cvalue_dict = {}
+    triple_dict = {}  # 'candidate': (f(b), t(b), c(b))
+    max_num_words = max(sorted_phrase_dict.keys())
+
+    # Longest candidates.
+    for phrs_a, freq_a in sorted_phrase_dict[max_num_words]:
+        cvalue_dict[phrs_a] = log(len(phrs_a.split()), 2) * freq_a
+        for num_words in reversed(range(2, max_num_words)):
+            for phrs_b, freq_b in sorted_phrase_dict[num_words]:
+                if phrs_b in phrs_a:
+                    if phrs_b not in triple_dict.keys():  # create triple
+                        triple_dict[phrs_b] = (freq_b, freq_a, 1)
+                    else:                                 # update triple
+                        fb, old_tb, old_cb = triple_dict[phrs_b]
+                        triple_dict[phrs_b] = (fb, old_tb + freq_a, old_cb + 1)
+
+    # Candidates with num. words < max num. words
+    num_words_counter = max_num_words - 1
+    while num_words_counter > 1:
+        for phrs_a, freq_a in sorted_phrase_dict[num_words_counter]:
+            if phrs_a not in triple_dict.keys():
+                cvalue_dict[phrs_a] = log(len(phrs_a.split()), 2) * freq_a
             else:
-                cval = log(len(tc.split()), 2) * freq_dict[tc]
-                term_cvalue[tc] = cval
-    return term_cvalue
+                cvalue_dict[phrs_a] = log(len(phrs_a.split()), 2) * \
+                    (freq_a - ((1/triple_dict[phrs_a][2])
+                               * triple_dict[phrs_a][1]))
+            for num_words in reversed(range(2, num_words_counter)):
+                for phrs_b, freq_b in sorted_phrase_dict[num_words]:
+                    if phrs_b in phrs_a:
+                        if phrs_b not in triple_dict.keys():  # create triple
+                            triple_dict[phrs_b] = (freq_b, freq_a, 1)
+                        else:                                 # update triple
+                            fb, old_tb, old_cb = triple_dict[phrs_b]
+# if/else below: If n(a) is the number of times a has appeared as nested, then
+# t(b) will be increased by f(a) - n(a). Frantzi, et al (2000), end of p.5.
+                            if phrs_a in triple_dict.keys():
+                                triple_dict[phrs_b] = (
+                                    fb,
+                                    old_tb + freq_a - triple_dict[phrs_a][1],
+                                    old_cb + 1)
+                            else:
+                                triple_dict[phrs_b] = (
+                                    fb, old_tb + freq_a, old_cb + 1)
+        num_words_counter -= 1
 
-
-def calc_precision(extracted_terms):
-    """doctstring for calc_precision"""
-    with open('input/términos en corpus.txt', 'r') as termf:
-        terms_raw = termf.read().decode('utf-8')
-    terms = [l.strip() for l in terms_raw.split('\n')]
-    terms = [remove_postags(l).lower() for l in terms if len(l.split()) > 1]
-
-    real_term_num = 0
-    for exterm in extracted_terms:
-        if exterm.lower() in terms:
-            real_term_num += 1
-    print (real_term_num / len(extracted_terms)) * 100
+    return cvalue_dict
 
 
 def main():
     """docstring for main"""
+
+    # STEP 1.
     sents = load_tagged_sents()
+
+    # STEP 2: Extract matching patterns above frequency threshold.
     pattern = r"""
         TC: {<NC>+<AQ>*(<PDEL><DA>?<NC>+<AQ>*)?}
         """
     phrase_freq = chunk_sents(sents, pattern, 2)
 
-    #accepted_phrases = binom_ratio_filter(phrase_freq, 0.2)[0]
-    #cval_input = build_cval_input(accepted_phrases)
-    cval_input = build_cval_input(phrase_freq)
+    # STEP 2: Remove chunks with words in stoplist (or binom ratio list).
+    accepted_phrases = binom_ratio_filter(phrase_freq, 0.2)[0]
 
-    cval_input = remove_1word_candidates(cval_input)
+    # Remove 1 word chunks (necessary if pos pattern extracts 1 word chunks).
+    accepted_phrases = remove_1word_candidates(accepted_phrases)
 
-    cval_output = cvalue(cval_input)
-    cval_output = sorted(
-        cval_output.items(), key=lambda item: item[1], reverse=True)
+    # STEP 2: Remove POS tags from phrases.
+    accepted_phrases = remove_pos_tags(accepted_phrases)
 
-    precision = calc_precision([t[0] for t in cval_output])
+    # STEP 2: Order candidates first by number of words, then by frequency.
+    sorted_phrases = build_sorted_phrases(accepted_phrases)
 
-    #with open('br_cvals.txt', 'w') as f:
-    #    f.write('\n'.join(
-    #        str(round(c[1], 3))+'\t'+c[0].encode('utf-8') for c in cval_output))
+    # STEP 3?
+    cvalue_output = calc_cvalue(sorted_phrases)
+    for x in sorted(cvalue_output.items(),
+                    key=lambda item: item[1], reverse=True):
+        print x[0], x[1]
+
+    # TODO: test con ejemplo de juguete en Frantzi, et al (2000)
 
 
 if __name__ == '__main__':
