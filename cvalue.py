@@ -52,18 +52,24 @@ def binom_ratio_filter(candidate_freq_dict, cutoff):
     return dict(kept_phrases), dict(disc_phrases)
 
 
+def remove_str_postags(tagged_str):
+    """docstring for remove_str_postags"""
+    stripped_str = ' '.join([w.split('/')[0] for w in tagged_str.split()])
+    return stripped_str
+
+
 # Remove POS tags from phrases (keys) and return dict.
-def remove_pos_tags(phrase_freq_dict):
-    """docstring for candidate_freq_dict"""
-    cval_input_dict = {}
+def remove_dict_postags(phrase_freq_dict):
+    """docstring for remove_dict_postags"""
+    new_dict = {}
     for phrase in phrase_freq_dict.keys():
-        lema_phrase = ' '.join([w.split('/')[0] for w in phrase.split()])
-        cval_input_dict[lema_phrase] = phrase_freq_dict[phrase]
-    return cval_input_dict
+        new_str = remove_str_postags(phrase)
+        new_dict[new_str] = phrase_freq_dict[phrase]
+    return new_dict
 
 
 def remove_1word_candidates(phrase_freq_dict):
-    """doctstring for candidate_freq_dict"""
+    """doctstring for remove_1word_candidates"""
     return dict(
         (k, v) for k, v in phrase_freq_dict.items() if len(k.split()) > 1)
 
@@ -80,7 +86,6 @@ def build_sorted_phrases(phrase_freq_dict):
     return sorted_phrase_dict
 
 
-# TODO: filter out candidates with c-value < threshold
 def calc_cvalue(sorted_phrase_dict):
     """ See:
 - Frantzi, Ananiadou, Mima (2000)- Automatic Recognition of Multi-Word Terms -
@@ -135,45 +140,102 @@ def calc_cvalue(sorted_phrase_dict):
     return cvalue_dict
 
 
+def load_reference():
+    """docstring for load_reference"""
+    with open('input/términos en corpus.txt', 'r') as rf:
+        ref_raw = rf.read().decode('utf-8')
+    ref_list = ref_raw.split('\n')
+    ref_list = [remove_str_postags(i.strip()) for i in ref_list]
+    return ref_list
+
+
+def generate_bins(item_list, num_bins):
+    """docstring for generate_bins"""
+    start_index = 0
+    for bin_num in xrange(num_bins):
+        end_index = start_index + len(item_list[bin_num::num_bins])
+        yield item_list[start_index:end_index]
+        start_index = end_index
+
+
+def precision_recall_stats(reference_list, sorted_test_list, num_bins):
+    """docstring for precision_recall_stats"""
+    ref_set = set(reference_list)
+    test_set = set(sorted_test_list)
+    for segment in generate_bins(sorted_test_list, num_bins):
+        seg_pval = nltk.metrics.precision(ref_set, set(segment))
+        print seg_pval
+    print
+
+    pval = nltk.metrics.precision(ref_set, test_set)
+    rval = nltk.metrics.recall(ref_set, test_set)
+    print pval
+    print rval
+
+
+def run_experiment(phrase_pattern, min_freq, binom_cutoff, min_cvalue,
+                   num_bins):
+    """docstring for run_experiment"""
+    # STEP 1.
+    sents = load_tagged_sents()
+    # STEP 2: Extract matching patterns above frequency threshold.
+    phrase_freq = chunk_sents(sents, phrase_pattern, min_freq)
+    # STEP 2: Remove chunks with words in stoplist (or binom ratio list).
+    accepted_phrases = binom_ratio_filter(phrase_freq, binom_cutoff)[0]
+    # Remove 1 word chunks (necessary if pos pattern extracts 1 word chunks).
+    accepted_phrases = remove_1word_candidates(accepted_phrases)
+    # STEP 2: Remove POS tags from phrases.
+    accepted_phrases = remove_dict_postags(accepted_phrases)
+    # STEP 2: Order candidates first by number of words, then by frequency.
+    sorted_phrases = build_sorted_phrases(accepted_phrases)
+    # STEP 3: Calculate c-value
+    # TODO: *discard candidates with cvalue < min_cvalue before adding
+    # substrings to triple_dict.*
+    cvalue_output = calc_cvalue(sorted_phrases)
+    #for x in sorted(cvalue_output.items(),
+                    #key=lambda item: item[1], reverse=True):
+        #print x[0], x[1]
+
+    reference = load_reference()
+    sorted_cval = sorted(
+        cvalue_output.items(), key=lambda item: item[1], reverse=True)
+    test = [k for k, v in sorted_cval if v > min_cvalue]  # Filter out
+    # candidates with cvalue < min_cvalue in calc_cvalue() func,
+    # before adding to output list or processing substrings.
+    stats = precision_recall_stats(reference, test, num_bins)
+
+
 def main():
     """docstring for main"""
 
-    # STEP 1.
-    sents = load_tagged_sents()
-
-    # STEP 2: Extract matching patterns above frequency threshold.
     pattern = r"""
         TC: {<NC>+<AQ>*(<PDEL><DA>?<NC>+<AQ>*)?}
         """
-    phrase_freq = chunk_sents(sents, pattern, 2)
+    min_freq = 1
+    binom_cutoff = 1.0
+    min_cvalue = 1.9
+    num_bins = 4
 
-    # STEP 2: Remove chunks with words in stoplist (or binom ratio list).
-    accepted_phrases = binom_ratio_filter(phrase_freq, 0.2)[0]
+    run_experiment(pattern, min_freq, binom_cutoff, min_cvalue, num_bins)
 
-    # Remove 1 word chunks (necessary if pos pattern extracts 1 word chunks).
-    accepted_phrases = remove_1word_candidates(accepted_phrases)
-
-    # STEP 2: Remove POS tags from phrases.
-    accepted_phrases = remove_pos_tags(accepted_phrases)
-
-    # STEP 2: Order candidates first by number of words, then by frequency.
-    sorted_phrases = build_sorted_phrases(accepted_phrases)
-
-    # STEP 3: Calculate c-value
-    cvalue_output = calc_cvalue(sorted_phrases)
-    for x in sorted(cvalue_output.items(),
-                    key=lambda item: item[1], reverse=True):
-        print x[0], x[1]
+    # curiosamente, jugando con los valores de min_freq, binom_cutoff y
+    # min_cvalue, frecuentemente se ve mejor precisión en los tramos primeros
+    # y últimos del output de cvalue. ¿por qué? ¿cómo afectan las
+    # preposiciones, y qué pasa si de entrada las elimino?
 
     # TODO: test con ejemplo de juguete en Frantzi, et al (2000). Simplemente
     # por rigurosidad, ya que los resultados son iguales a los de la
     # implementación anterior, que pasaba el test.
 
-    # TODO: implementar funciones de precisión (por trechos) y cobertura.
-
     # TODO: jugar con argumentos (patrón sintáctico, corte en lista de razones
     # de probabilidades binomiales, threshold de frequencia, threshold de
     # c-value, etc) y registrar valores de precisión y cobertura.
+
+    # TODO: hacer función que haga la combinación de diferentes valores de
+    # min_freq, binom_cutoff, min_cvalue
+
+    # TODO: revisar patrones POS de términos validados y ver si se puede
+    # jugar con el patrón de chunkeo.
 
 
 if __name__ == '__main__':
