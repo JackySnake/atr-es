@@ -146,6 +146,8 @@ def load_reference():
         ref_raw = rf.read().decode('utf-8')
     ref_list = ref_raw.split('\n')
     ref_list = [remove_str_postags(i.strip()) for i in ref_list]
+    # Remove 1 word terms
+    ref_list = [i for i in ref_list if len(i.split()) > 1]
     return ref_list
 
 
