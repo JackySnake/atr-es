@@ -178,8 +178,8 @@ def precision_recall_stats(reference_list, sorted_test_list, num_bins):
     print round(rval, 2)
 
 
-def make_context_weights(real_term_list, tagged_sents, valid_tags):
-    """docstring for calc_ncvalue"""
+def make_contextword_weight_dict(real_term_list, tagged_sents, valid_tags):
+    """docstring for make_contextword_weight_dict"""
     context_word_dict = defaultdict(int)
     num_terms_seen = 0
     for term in real_term_list:
@@ -195,6 +195,10 @@ def make_context_weights(real_term_list, tagged_sents, valid_tags):
                     if term_split == word_size_window:
                         left_context = sent[:wt_idx][-2:]
                         right_context = sent[wt_idx+len(term_split):][:2]
+                        # TODO: cut at punctuation marks after which context
+                        # words are not related to term. e.g:
+                        # left_context = left_context.split(.,;:()etc)[-1]
+                        # right_context = right_context.split(.,;:()etc)[0]
                         context = left_context + right_context
                         valid_words = [w[0] for w in context if
                                        w[1].lower() in valid_tags]
