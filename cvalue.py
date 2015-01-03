@@ -68,12 +68,6 @@ def remove_dict_postags(phrase_freq_dict):
     return new_dict
 
 
-def remove_1word_candidates(phrase_freq_dict):
-    """doctstring for remove_1word_candidates"""
-    return dict(
-        (k, v) for k, v in phrase_freq_dict.items() if len(k.split()) > 1)
-
-
 def build_sorted_phrases(phrase_freq_dict):
     """docstring for build_sorted_phrases"""
     sorted_phrase_dict = defaultdict(list)
@@ -199,9 +193,6 @@ def run_experiment(phrase_pattern, min_freq, binom_cutoff,
     sorted_phrases = build_sorted_phrases(accepted_phrases)
     # STEP 3: Calculate c-value
     cvalue_output = calc_cvalue(sorted_phrases, min_cvalue1)
-    #for x in sorted(cvalue_output.items(),
-                    #key=lambda item: item[1], reverse=True):
-        #print x[0], x[1]
 
     reference = load_reference()
     sorted_cval = sorted(
@@ -212,6 +203,10 @@ def run_experiment(phrase_pattern, min_freq, binom_cutoff,
     print phrase_pattern.strip()
     print min_freq, binom_cutoff, min_cvalue1, min_cvalue2
     stats = precision_recall_stats(reference, test, num_bins)
+
+    #print
+    #for i in sorted_cval:
+    #    print i[0], i[1]
 
 
 def main():
