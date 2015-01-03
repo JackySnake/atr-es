@@ -86,7 +86,7 @@ def build_sorted_phrases(phrase_freq_dict):
     return sorted_phrase_dict
 
 
-def calc_cvalue(sorted_phrase_dict):
+def calc_cvalue(sorted_phrase_dict, min_cvalue):
     """ See:
 - Frantzi, Ananiadou, Mima (2000)- Automatic Recognition of Multi-Word Terms -
     the C-value-NC-value Method
@@ -98,43 +98,50 @@ def calc_cvalue(sorted_phrase_dict):
 
     # Longest candidates.
     for phrs_a, freq_a in sorted_phrase_dict[max_num_words]:
-        cvalue_dict[phrs_a] = log(len(phrs_a.split()), 2) * freq_a
-        for num_words in reversed(range(2, max_num_words)):
-            for phrs_b, freq_b in sorted_phrase_dict[num_words]:
-                if phrs_b in phrs_a:
-                    if phrs_b not in triple_dict.keys():  # create triple
-                        triple_dict[phrs_b] = (freq_b, freq_a, 1)
-                    else:                                 # update triple
-                        fb, old_tb, old_cb = triple_dict[phrs_b]
-                        triple_dict[phrs_b] = (fb, old_tb + freq_a, old_cb + 1)
-
-    # Candidates with num. words < max num. words
-    num_words_counter = max_num_words - 1
-    while num_words_counter > 1:
-        for phrs_a, freq_a in sorted_phrase_dict[num_words_counter]:
-            if phrs_a not in triple_dict.keys():
-                cvalue_dict[phrs_a] = log(len(phrs_a.split()), 2) * freq_a
-            else:
-                cvalue_dict[phrs_a] = log(len(phrs_a.split()), 2) * \
-                    (freq_a - ((1/triple_dict[phrs_a][2])
-                               * triple_dict[phrs_a][1]))
-            for num_words in reversed(range(2, num_words_counter)):
+        cvalue = log(len(phrs_a.split()), 2) * freq_a
+        if cvalue >= min_cvalue:
+            cvalue_dict[phrs_a] = cvalue
+            for num_words in reversed(range(2, max_num_words)):
                 for phrs_b, freq_b in sorted_phrase_dict[num_words]:
                     if phrs_b in phrs_a:
                         if phrs_b not in triple_dict.keys():  # create triple
                             triple_dict[phrs_b] = (freq_b, freq_a, 1)
                         else:                                 # update triple
                             fb, old_tb, old_cb = triple_dict[phrs_b]
+                            triple_dict[phrs_b] = \
+                                (fb, old_tb + freq_a, old_cb + 1)
+
+    # Candidates with num. words < max num. words
+    num_words_counter = max_num_words - 1
+    while num_words_counter > 1:
+        for phrs_a, freq_a in sorted_phrase_dict[num_words_counter]:
+            if phrs_a not in triple_dict.keys():
+                cvalue = log(len(phrs_a.split()), 2) * freq_a
+                if cvalue >= min_cvalue:
+                    cvalue_dict[phrs_a] = cvalue
+            else:
+                cvalue = log(len(phrs_a.split()), 2) * \
+                    (freq_a - ((1/triple_dict[phrs_a][2])
+                               * triple_dict[phrs_a][1]))
+                if cvalue >= min_cvalue:
+                    cvalue_dict[phrs_a] = cvalue
+            if cvalue >= min_cvalue:
+                for num_words in reversed(range(2, num_words_counter)):
+                    for phrs_b, freq_b in sorted_phrase_dict[num_words]:
+                        if phrs_b in phrs_a:
+                            if phrs_b not in triple_dict.keys():  # make triple
+                                triple_dict[phrs_b] = (freq_b, freq_a, 1)
+                            else:                                 # updt triple
+                                fb, old_tb, old_cb = triple_dict[phrs_b]
 # if/else below: If n(a) is the number of times a has appeared as nested, then
 # t(b) will be increased by f(a) - n(a). Frantzi, et al (2000), end of p.5.
-                            if phrs_a in triple_dict.keys():
-                                triple_dict[phrs_b] = (
-                                    fb,
-                                    old_tb + freq_a - triple_dict[phrs_a][1],
-                                    old_cb + 1)
-                            else:
-                                triple_dict[phrs_b] = (
-                                    fb, old_tb + freq_a, old_cb + 1)
+                                if phrs_a in triple_dict.keys():
+                                    triple_dict[phrs_b] = (
+                                        fb, old_tb + freq_a -
+                                        triple_dict[phrs_a][1], old_cb + 1)
+                                else:
+                                    triple_dict[phrs_b] = (
+                                        fb, old_tb + freq_a, old_cb + 1)
         num_words_counter -= 1
 
     return cvalue_dict
@@ -166,17 +173,17 @@ def precision_recall_stats(reference_list, sorted_test_list, num_bins):
     test_set = set(sorted_test_list)
     for segment in generate_bins(sorted_test_list, num_bins):
         seg_pval = nltk.metrics.precision(ref_set, set(segment))
-        print seg_pval
-    print
+        print round(seg_pval, 3)
+    print '=' * 5
 
     pval = nltk.metrics.precision(ref_set, test_set)
     rval = nltk.metrics.recall(ref_set, test_set)
-    print pval
-    print rval
+    print round(pval, 3)
+    print round(rval, 3)
 
 
-def run_experiment(phrase_pattern, min_freq, binom_cutoff, min_cvalue,
-                   num_bins):
+def run_experiment(phrase_pattern, min_freq, binom_cutoff,
+                   min_cvalue1, min_cvalue2, num_bins):
     """docstring for run_experiment"""
     # STEP 1.
     sents = load_tagged_sents()
@@ -193,7 +200,7 @@ def run_experiment(phrase_pattern, min_freq, binom_cutoff, min_cvalue,
     # STEP 3: Calculate c-value
     # TODO: *discard candidates with cvalue < min_cvalue before adding
     # substrings to triple_dict.*
-    cvalue_output = calc_cvalue(sorted_phrases)
+    cvalue_output = calc_cvalue(sorted_phrases, min_cvalue1)
     #for x in sorted(cvalue_output.items(),
                     #key=lambda item: item[1], reverse=True):
         #print x[0], x[1]
@@ -201,9 +208,11 @@ def run_experiment(phrase_pattern, min_freq, binom_cutoff, min_cvalue,
     reference = load_reference()
     sorted_cval = sorted(
         cvalue_output.items(), key=lambda item: item[1], reverse=True)
-    test = [k for k, v in sorted_cval if v > min_cvalue]  # Filter out
+    test = [k for k, v in sorted_cval if v > min_cvalue2]  # Filter out
     # candidates with cvalue < min_cvalue in calc_cvalue() func,
     # before adding to output list or processing substrings.
+    print phrase_pattern.strip()
+    print min_freq, binom_cutoff, min_cvalue1, min_cvalue2
     stats = precision_recall_stats(reference, test, num_bins)
 
 
@@ -214,11 +223,13 @@ def main():
         TC: {<NC>+<AQ>*(<PDEL><DA>?<NC>+<AQ>*)?}
         """
     min_freq = 1
-    binom_cutoff = 1.0
-    min_cvalue = 1.9
+    binom_cutoff = 0.8
+    min_cvalue1 = 0.0
+    min_cvalue2 = 1.0
     num_bins = 4
 
-    run_experiment(pattern, min_freq, binom_cutoff, min_cvalue, num_bins)
+    run_experiment(pattern, min_freq, binom_cutoff,
+                   min_cvalue1, min_cvalue2, num_bins)
 
     # curiosamente, jugando con los valores de min_freq, binom_cutoff y
     # min_cvalue, frecuentemente se ve mejor precisión en los tramos primeros
