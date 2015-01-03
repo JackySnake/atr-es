@@ -178,8 +178,12 @@ def precision_recall_stats(reference_list, sorted_test_list, num_bins):
     print round(rval, 2)
 
 
-def make_contextword_weight_dict(real_term_list, tagged_sents, valid_tags):
+def make_contextword_weight_dict(real_term_list, tagged_sents, valid_tags,
+                                 context_size):
     """docstring for make_contextword_weight_dict"""
+    # if context_size = 5, does that mean that it's 5 words to the left and 5
+    # words to the right, or 2 words to left and 2 to the right?
+    context_size = int(5/2)
     context_word_dict = defaultdict(int)
     num_terms_seen = 0
     for term in real_term_list:
@@ -193,8 +197,9 @@ def make_contextword_weight_dict(real_term_list, tagged_sents, valid_tags):
                         w[0] for w in
                         sent[wt_idx:wt_idx+len(term_split)]]
                     if term_split == word_size_window:
-                        left_context = sent[:wt_idx][-2:]
-                        right_context = sent[wt_idx+len(term_split):][:2]
+                        left_context = sent[:wt_idx][-context_size:]
+                        right_context = \
+                            sent[wt_idx+len(term_split):][:context_size]
                         # TODO: cut at punctuation marks after which context
                         # words are not related to term. e.g:
                         # left_context = left_context.split(.,;:()etc)[-1]
@@ -241,8 +246,12 @@ def run_experiment(phrase_pattern, min_freq, binom_cutoff,
     cval_top = [cand_term for cand_term, cand_freq in
                 sorted_cval[0:int(len(sorted_cval) * cval_top_x_percent)]]
     valid_postags = ['nc', 'aq', 'vm']
-    context_word_weights = make_context_weights(
-        cval_top, sents, valid_postags)
+    context_word_weights = make_contextword_weight_dict(
+        cval_top, sents, valid_postags, 5)
+    for word, weight in sorted(context_word_weights.items(),
+                               key=lambda item: item[1], reverse=True):
+        print word, weight
+        raw_input()
 
 
 def main():
