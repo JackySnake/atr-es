@@ -178,6 +178,35 @@ def precision_recall_stats(reference_list, sorted_test_list, num_bins):
     print round(rval, 2)
 
 
+def make_context_weights(real_term_list, tagged_sents, valid_tags):
+    """docstring for calc_ncvalue"""
+    context_word_dict = defaultdict(int)
+    num_terms_seen = 0
+    for term in real_term_list:
+        for sent in tagged_sents:
+            sent_str = ' '.join(w[0] for w in sent)
+            if term in sent_str:
+                term_split = term.split()
+                for wt_idx in range(len(sent) - len(term_split)):
+                    # wt_idx = wordtag_index.
+                    word_size_window = [
+                        w[0] for w in
+                        sent[wt_idx:wt_idx+len(term_split)]]
+                    if term_split == word_size_window:
+                        left_context = sent[:wt_idx][-2:]
+                        right_context = sent[wt_idx+len(term_split):][:2]
+                        context = left_context + right_context
+                        valid_words = [w[0] for w in context if
+                                       w[1].lower() in valid_tags]
+                        for word in valid_words:
+                            context_word_dict[word] += 1
+                        num_terms_seen += 1
+                        break
+    context_word_dict = dict(  # Transform keys: freqs -> weights
+        (k, v/num_terms_seen) for k, v in context_word_dict.items())
+    return context_word_dict
+
+
 def run_experiment(phrase_pattern, min_freq, binom_cutoff,
                    min_cvalue1, min_cvalue2, num_bins):
     """docstring for run_experiment"""
@@ -204,9 +233,12 @@ def run_experiment(phrase_pattern, min_freq, binom_cutoff,
     print min_freq, binom_cutoff, min_cvalue1, min_cvalue2
     stats = precision_recall_stats(reference, test, num_bins)
 
-    #print
-    #for i in sorted_cval:
-    #    print i[0], i[1]
+    cval_top_x_percent = 0.25
+    cval_top = [cand_term for cand_term, cand_freq in
+                sorted_cval[0:int(len(sorted_cval) * cval_top_x_percent)]]
+    valid_postags = ['nc', 'aq', 'vm']
+    context_word_weights = make_context_weights(
+        cval_top, sents, valid_postags)
 
 
 def main():
@@ -216,8 +248,8 @@ def main():
         TC: {<NC>+<AQ>*(<PDEL><DA>?<NC>+<AQ>*)?}
         """
     min_freq = 1
-    binom_cutoff = 0.0
-    min_cvalue1 = 0.0
+    binom_cutoff = 3.0
+    min_cvalue1 = 1.5
     min_cvalue2 = 0.0
     num_bins = 4
 
