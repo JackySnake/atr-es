@@ -98,10 +98,10 @@ def calc_cvalue(sorted_phrase_dict, min_cvalue):
 
     # Longest candidates.
     for phrs_a, freq_a in sorted_phrase_dict[max_num_words]:
-        cvalue = log(len(phrs_a.split()), 2) * freq_a
+        cvalue = (1.0 + log(len(phrs_a.split()), 2)) * freq_a
         if cvalue >= min_cvalue:
             cvalue_dict[phrs_a] = cvalue
-            for num_words in reversed(range(2, max_num_words)):
+            for num_words in reversed(range(1, max_num_words)):
                 for phrs_b, freq_b in sorted_phrase_dict[num_words]:
                     if phrs_b in phrs_a:
                         if phrs_b not in triple_dict.keys():  # create triple
@@ -113,20 +113,20 @@ def calc_cvalue(sorted_phrase_dict, min_cvalue):
 
     # Candidates with num. words < max num. words
     num_words_counter = max_num_words - 1
-    while num_words_counter > 1:
+    while num_words_counter > 0:
         for phrs_a, freq_a in sorted_phrase_dict[num_words_counter]:
             if phrs_a not in triple_dict.keys():
-                cvalue = log(len(phrs_a.split()), 2) * freq_a
+                cvalue = (1.0 + log(len(phrs_a.split()), 2)) * freq_a
                 if cvalue >= min_cvalue:
                     cvalue_dict[phrs_a] = cvalue
             else:
-                cvalue = log(len(phrs_a.split()), 2) * \
+                cvalue = (1.0 + log(len(phrs_a.split()), 2)) * \
                     (freq_a - ((1/triple_dict[phrs_a][2])
                                * triple_dict[phrs_a][1]))
                 if cvalue >= min_cvalue:
                     cvalue_dict[phrs_a] = cvalue
             if cvalue >= min_cvalue:
-                for num_words in reversed(range(2, num_words_counter)):
+                for num_words in reversed(range(1, num_words_counter)):
                     for phrs_b, freq_b in sorted_phrase_dict[num_words]:
                         if phrs_b in phrs_a:
                             if phrs_b not in triple_dict.keys():  # make triple
@@ -153,8 +153,6 @@ def load_reference():
         ref_raw = rf.read().decode('utf-8')
     ref_list = ref_raw.split('\n')
     ref_list = [remove_str_postags(i.strip()) for i in ref_list]
-    # Remove 1 word terms
-    ref_list = [i for i in ref_list if len(i.split()) > 1]
     return ref_list
 
 
@@ -171,15 +169,19 @@ def precision_recall_stats(reference_list, sorted_test_list, num_bins):
     """docstring for precision_recall_stats"""
     ref_set = set(reference_list)
     test_set = set(sorted_test_list)
+    print 'Candidates:', len(test_set)
+    print 'Real Terms:', len(test_set.intersection(ref_set))
+    print '=' * 4
+
     for segment in generate_bins(sorted_test_list, num_bins):
         seg_pval = nltk.metrics.precision(ref_set, set(segment))
-        print round(seg_pval, 3)
-    print '=' * 5
+        print round(seg_pval, 2)
+    print '=' * 4
 
     pval = nltk.metrics.precision(ref_set, test_set)
     rval = nltk.metrics.recall(ref_set, test_set)
-    print round(pval, 3)
-    print round(rval, 3)
+    print round(pval, 2)
+    print round(rval, 2)
 
 
 def run_experiment(phrase_pattern, min_freq, binom_cutoff,
@@ -191,15 +193,11 @@ def run_experiment(phrase_pattern, min_freq, binom_cutoff,
     phrase_freq = chunk_sents(sents, phrase_pattern, min_freq)
     # STEP 2: Remove chunks with words in stoplist (or binom ratio list).
     accepted_phrases = binom_ratio_filter(phrase_freq, binom_cutoff)[0]
-    # Remove 1 word chunks (necessary if pos pattern extracts 1 word chunks).
-    accepted_phrases = remove_1word_candidates(accepted_phrases)
     # STEP 2: Remove POS tags from phrases.
     accepted_phrases = remove_dict_postags(accepted_phrases)
     # STEP 2: Order candidates first by number of words, then by frequency.
     sorted_phrases = build_sorted_phrases(accepted_phrases)
     # STEP 3: Calculate c-value
-    # TODO: *discard candidates with cvalue < min_cvalue before adding
-    # substrings to triple_dict.*
     cvalue_output = calc_cvalue(sorted_phrases, min_cvalue1)
     #for x in sorted(cvalue_output.items(),
                     #key=lambda item: item[1], reverse=True):
@@ -223,9 +221,9 @@ def main():
         TC: {<NC>+<AQ>*(<PDEL><DA>?<NC>+<AQ>*)?}
         """
     min_freq = 1
-    binom_cutoff = 0.8
+    binom_cutoff = 0.0
     min_cvalue1 = 0.0
-    min_cvalue2 = 1.0
+    min_cvalue2 = 0.0
     num_bins = 4
 
     run_experiment(pattern, min_freq, binom_cutoff,
