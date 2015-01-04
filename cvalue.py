@@ -210,7 +210,7 @@ def make_contextword_weight_dict(real_term_list, tagged_sents, valid_tags,
                         for word in valid_words:
                             context_word_dict[word] += 1
                         num_terms_seen += 1
-                        break
+                        break  #  1 term match per sentence
     context_word_dict = dict(  # Transform keys: freqs -> weights
         (k, v/num_terms_seen) for k, v in context_word_dict.items())
     return context_word_dict
@@ -237,14 +237,13 @@ def calc_ncvalue(cvalue_dict, tagged_sents, contextword_weight_dict,
                         left_context = sent[:wt_idx][-context_size:]
                         right_context = \
                             sent[wt_idx+len(candidate_split):][:context_size]
+                        # TODO: see same bit in previous function.
                         context = left_context + right_context
                         valid_words = [w[0] for w in context if
                                        w[1].lower() in valid_tags]
                         for word in valid_words:
                             ccw_freq_dict[word] += 1
-        #print candidate
-        #print ccw_freq_dict.items()
-        #raw_input()
+                        break  # 1 candidate match per sentence
         context_factors = []
         for word in ccw_freq_dict.keys():
             if word in contextword_weight_dict.keys():
@@ -286,10 +285,6 @@ def run_experiment(phrase_pattern, min_freq, binom_cutoff,
     valid_postags = ['nc', 'aq', 'vm']
     context_word_weights = make_contextword_weight_dict(
         cval_top, sents, valid_postags, 5)
-    #for word, weight in sorted(context_word_weights.items(),
-    #                           key=lambda item: item[1], reverse=True):
-    #    print word, weight
-    #    raw_input()
     ncvalue_output = calc_ncvalue(
         cvalue_output, sents, context_word_weights, valid_postags, 5)
     sorted_ncvalue = sorted(
