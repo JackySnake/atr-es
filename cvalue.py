@@ -183,7 +183,7 @@ def make_contextword_weight_dict(real_term_list, tagged_sents, valid_tags,
     """docstring for make_contextword_weight_dict"""
     # if context_size = 5, does that mean that it's 5 words to the left and 5
     # words to the right, or 2 words to left and 2 to the right?
-    context_size = int(context_size/2)
+    #context_size = int(context_size/2)
     context_word_dict = defaultdict(int)
     num_terms_seen = 0
     for term in real_term_list:
@@ -221,7 +221,8 @@ def calc_ncvalue(cvalue_dict, tagged_sents, contextword_weight_dict,
     """docstring for calc_ncvalue"""
     # if context_size = 5, does that mean that it's 5 words to the left and 5
     # words to the right, or 2 words to left and 2 to the right?
-    context_size = int(context_size/2)
+    #context_size = int(context_size/2)
+    ncvalue_dict = {}
     for candidate in cvalue_dict.keys():
         ccw_freq_dict = defaultdict(int)  # ccw = candidate_context_words
         for sent in tagged_sents:
@@ -241,13 +242,21 @@ def calc_ncvalue(cvalue_dict, tagged_sents, contextword_weight_dict,
                                        w[1].lower() in valid_tags]
                         for word in valid_words:
                             ccw_freq_dict[word] += 1
-        print candidate
-        print ccw_freq_dict.items()
-        raw_input()
+        #print candidate
+        #print ccw_freq_dict.items()
+        #raw_input()
+        context_factors = []
+        for word in ccw_freq_dict.keys():
+            if word in contextword_weight_dict.keys():
+                context_factors.append(
+                    ccw_freq_dict[word] * contextword_weight_dict[word])
+        ncvalue = (0.8 * cvalue_dict[candidate]) + (0.2 * sum(context_factors))
+        ncvalue_dict[candidate] = ncvalue
+    return ncvalue_dict
 
 
 def run_experiment(phrase_pattern, min_freq, binom_cutoff,
-                   min_cvalue1, min_cvalue2, num_bins):
+                   min_cvalue, num_bins):
     """docstring for run_experiment"""
     # STEP 1.
     sents = load_tagged_sents()
@@ -260,17 +269,16 @@ def run_experiment(phrase_pattern, min_freq, binom_cutoff,
     # STEP 2: Order candidates first by number of words, then by frequency.
     sorted_phrases = build_sorted_phrases(accepted_phrases)
     # STEP 3: Calculate c-value
-    cvalue_output = calc_cvalue(sorted_phrases, min_cvalue1)
+    cvalue_output = calc_cvalue(sorted_phrases, min_cvalue)
 
     reference = load_reference()
     sorted_cval = sorted(
         cvalue_output.items(), key=lambda item: item[1], reverse=True)
-    test = [k for k, v in sorted_cval if v > min_cvalue2]  # Filter out
-    # candidates with cvalue < min_cvalue in calc_cvalue() func,
-    # before adding to output list or processing substrings.
+    test = [k for k, v in sorted_cval]
     print phrase_pattern.strip()
-    print min_freq, binom_cutoff, min_cvalue1, min_cvalue2
+    print min_freq, binom_cutoff, min_cvalue
     stats = precision_recall_stats(reference, test, num_bins)
+    print
 
     cval_top_x_percent = 0.25
     cval_top = [cand_term for cand_term, cand_freq in
@@ -284,6 +292,11 @@ def run_experiment(phrase_pattern, min_freq, binom_cutoff,
     #    raw_input()
     ncvalue_output = calc_ncvalue(
         cvalue_output, sents, context_word_weights, valid_postags, 5)
+    sorted_ncvalue = sorted(
+        ncvalue_output.items(), key=lambda item: item[1], reverse=True)
+    test = [k for k, v in sorted_ncvalue]
+    stats = precision_recall_stats(reference, test, num_bins)
+    print
 
 
 def main():
@@ -294,12 +307,11 @@ def main():
         """
     min_freq = 1
     binom_cutoff = 3.0
-    min_cvalue1 = 1.5
-    min_cvalue2 = 0.0
+    min_cvalue = 0.0
     num_bins = 4
 
     run_experiment(pattern, min_freq, binom_cutoff,
-                   min_cvalue1, min_cvalue2, num_bins)
+                   min_cvalue, num_bins)
 
     # curiosamente, jugando con los valores de min_freq, binom_cutoff y
     # min_cvalue, frecuentemente se ve mejor precisión en los tramos primeros
