@@ -183,7 +183,7 @@ def make_contextword_weight_dict(real_term_list, tagged_sents, valid_tags,
     """docstring for make_contextword_weight_dict"""
     # if context_size = 5, does that mean that it's 5 words to the left and 5
     # words to the right, or 2 words to left and 2 to the right?
-    context_size = int(5/2)
+    context_size = int(context_size/2)
     context_word_dict = defaultdict(int)
     num_terms_seen = 0
     for term in real_term_list:
@@ -214,6 +214,36 @@ def make_contextword_weight_dict(real_term_list, tagged_sents, valid_tags,
     context_word_dict = dict(  # Transform keys: freqs -> weights
         (k, v/num_terms_seen) for k, v in context_word_dict.items())
     return context_word_dict
+
+
+def calc_ncvalue(cvalue_dict, tagged_sents, contextword_weight_dict,
+                 valid_tags, context_size):
+    """docstring for calc_ncvalue"""
+    # if context_size = 5, does that mean that it's 5 words to the left and 5
+    # words to the right, or 2 words to left and 2 to the right?
+    context_size = int(context_size/2)
+    for candidate in cvalue_dict.keys():
+        ccw_freq_dict = defaultdict(int)  # ccw = candidate_context_words
+        for sent in tagged_sents:
+            sent_str = ' '.join(w[0] for w in sent)
+            if candidate in sent_str:
+                candidate_split = candidate.split()
+                for wt_idx in range(len(sent) - len(candidate_split)):
+                    word_size_window = [
+                        w[0] for w in
+                        sent[wt_idx:wt_idx+len(candidate_split)]]
+                    if candidate_split == word_size_window:
+                        left_context = sent[:wt_idx][-context_size:]
+                        right_context = \
+                            sent[wt_idx+len(candidate_split):][:context_size]
+                        context = left_context + right_context
+                        valid_words = [w[0] for w in context if
+                                       w[1].lower() in valid_tags]
+                        for word in valid_words:
+                            ccw_freq_dict[word] += 1
+        print candidate
+        print ccw_freq_dict.items()
+        raw_input()
 
 
 def run_experiment(phrase_pattern, min_freq, binom_cutoff,
@@ -248,10 +278,12 @@ def run_experiment(phrase_pattern, min_freq, binom_cutoff,
     valid_postags = ['nc', 'aq', 'vm']
     context_word_weights = make_contextword_weight_dict(
         cval_top, sents, valid_postags, 5)
-    for word, weight in sorted(context_word_weights.items(),
-                               key=lambda item: item[1], reverse=True):
-        print word, weight
-        raw_input()
+    #for word, weight in sorted(context_word_weights.items(),
+    #                           key=lambda item: item[1], reverse=True):
+    #    print word, weight
+    #    raw_input()
+    ncvalue_output = calc_ncvalue(
+        cvalue_output, sents, context_word_weights, valid_postags, 5)
 
 
 def main():
