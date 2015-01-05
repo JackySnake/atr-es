@@ -303,8 +303,8 @@ def main():
         TC: {<NC>+<AQ>*(<PDEL><DA>?<NC>+<AQ>*)?}
         """
     min_freq = 1
-    binom_cutoff = 5.0
-    min_cvalue = 0.0
+    binom_cutoff = 0.0
+    min_cvalue = 5.0
     num_bins = 4
 
     run_experiment(pattern, min_freq, binom_cutoff,

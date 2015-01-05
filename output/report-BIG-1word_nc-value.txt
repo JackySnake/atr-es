@@ -1,6 +1,17 @@
 TC: {<NC>+<AQ>*(<PDEL><DA>?<NC>+<AQ>*)?}
 
 
+1 2.0 3.0       -> min_freq, binom_cutoff, min_cvalue
+Cand: 1234      -> num. candidates
+Real: 5678      -> num. real terms
+0.12            -> precision 1st quartile
+0.34            -> precision 2nd quartile
+....            -> ...
+====            ====
+0.56            -> global precision
+0.78            -> recall
+
+
 1 0.0 0.0       2 0.0 0.0       3 0.0 0.0               10 0.0 0.0
 Cand: 92120     Cand: 32197     Cand: 19302             Cand: 5890
 Real: 4353      Real: 3492      Real: 2995              Real: 1751
@@ -36,6 +47,25 @@ C-value         C-value         C-value
 ====            ====            ====
 0.05            0.2             0.24
 0.89            0.61            0.51
+
+NC-value
+====
+< .7
+
+
+1 0.0 0.0       1 0.0 5.0       1 0.0 10.0
+Cand: 92120     Cand:           Cand: 10973
+Real: 4353      Real:           Real: 1877
+
+C-value         C-value         C-value
+====            ====            ====
+0.11            0.23            0.3
+0.03            0.1             0.18
+0.01            0.06            0.11
+0.05            0.03            0.1
+====            ====            ====
+0.05            0.11            0.17
+0.89            0.52            0.38
 
 NC-value
 ====
