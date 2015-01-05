@@ -9,14 +9,14 @@ from scipy.stats import binom
 
 def load_dom_ref():
     """docstring for load_dom_ref"""
-    with open('input/corpus_prueba.txt', 'r') as domf:
+    with open('input/small_domain.txt', 'r') as domf:
         dom_raw = domf.read().decode('utf-8')
     dom_freq_dict = defaultdict(int)
     for word in dom_raw.split():
         if word.split('/')[1] in ('NC', 'AQ'):
             dom_freq_dict[word] += 1
 
-    with open('input/referencia_ncyad.txt', 'r') as reff:
+    with open('input/small_reference_NCyAQ.txt', 'r') as reff:
         ref_raw = reff.read().decode('utf-8')[:-1]  # Remove last \n
     ref_freq_dict = {}
     for word in ref_raw.split('\n'):

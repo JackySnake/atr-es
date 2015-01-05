@@ -11,7 +11,7 @@ import binom
 
 def load_tagged_sents():
     """docstring for load_tagged_senits"""
-    with open('input/corpus_prueba.txt', 'r') as corpf:
+    with open('input/small_domain.txt', 'r') as corpf:
         corp = corpf.read().decode('utf-8')
     tagged_sents = [s.strip()+' ./Fp' for s in corp.split('./Fp')]
     tagged_sents = [s.split() for s in tagged_sents]
@@ -143,7 +143,7 @@ def calc_cvalue(sorted_phrase_dict, min_cvalue):
 
 def load_reference():
     """docstring for load_reference"""
-    with open('input/términos en corpus.txt', 'r') as rf:
+    with open('input/small_terms.txt', 'r') as rf:
         ref_raw = rf.read().decode('utf-8')
     ref_list = ref_raw.split('\n')
     ref_list = [remove_str_postags(i.strip()) for i in ref_list]
