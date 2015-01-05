@@ -10,8 +10,9 @@ import binom
 
 
 def load_tagged_sents():
-    """docstring for load_tagged_senits"""
-    with open('input/small_domain.txt', 'r') as corpf:
+    """docstring for load_tagged_sents"""
+    #with open('input/small_domain.txt', 'r') as corpf:  # small corpus
+    with open('input/big_domain.txt', 'r') as corpf:
         corp = corpf.read().decode('utf-8')
     tagged_sents = [s.strip()+' ./Fp' for s in corp.split('./Fp')]
     tagged_sents = [s.split() for s in tagged_sents]
@@ -143,7 +144,8 @@ def calc_cvalue(sorted_phrase_dict, min_cvalue):
 
 def load_reference():
     """docstring for load_reference"""
-    with open('input/small_terms.txt', 'r') as rf:
+    #with open('input/small_terms.txt', 'r') as rf:  # small corpus
+    with open('input/big_terms.txt', 'r') as rf:
         ref_raw = rf.read().decode('utf-8')
     ref_list = ref_raw.split('\n')
     ref_list = [remove_str_postags(i.strip()) for i in ref_list]
@@ -301,8 +303,8 @@ def main():
         TC: {<NC>+<AQ>*(<PDEL><DA>?<NC>+<AQ>*)?}
         """
     min_freq = 1
-    binom_cutoff = 0.0
-    min_cvalue = 3.0
+    binom_cutoff = 5.0
+    min_cvalue = 0.0
     num_bins = 4
 
     run_experiment(pattern, min_freq, binom_cutoff,

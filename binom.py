@@ -9,20 +9,30 @@ from scipy.stats import binom
 
 def load_dom_ref():
     """docstring for load_dom_ref"""
-    with open('input/small_domain.txt', 'r') as domf:
+    #with open('input/small_domain.txt', 'r') as domf:  # small corpus
+    with open('input/big_domain.txt', 'r') as domf:  # big corpus
         dom_raw = domf.read().decode('utf-8')
     dom_freq_dict = defaultdict(int)
     for word in dom_raw.split():
         if word.split('/')[1] in ('NC', 'AQ'):
             dom_freq_dict[word] += 1
 
-    with open('input/small_reference_NCyAQ.txt', 'r') as reff:
-        ref_raw = reff.read().decode('utf-8')[:-1]  # Remove last \n
-    ref_freq_dict = {}
-    for word in ref_raw.split('\n'):
-        word_div = word.split('/')
-        if word_div[1] in ('NC', 'AQ'):
-            ref_freq_dict[word_div[0]+'/'+word_div[1]] = int(word_div[2])
+    # small corpus
+    #with open('input/small_reference_NCyAQ.txt', 'r') as reff:
+    #    ref_raw = reff.read().decode('utf-8')[:-1]  # Remove last \n
+    #ref_freq_dict = {}
+    #for word in ref_raw.split('\n'):
+    #    word_div = word.split('/')
+    #    if word_div[1] in ('NC', 'AQ'):
+    #        ref_freq_dict[word_div[0]+'/'+word_div[1]] = int(word_div[2])
+
+    # big corpus
+    with open('input/big_reference.txt', 'r') as reff:
+        ref_raw = reff.read().decode('utf-8')
+    ref_freq_dict = defaultdict(int)
+    for word in ref_raw.split():
+        if word.split('/')[1] in ('NC', 'AQ'):
+            ref_freq_dict[word] += 1
 
     return dom_freq_dict, ref_freq_dict
 
