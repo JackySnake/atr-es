@@ -276,6 +276,11 @@ def run_experiment(phrase_pattern, min_freq, binom_cutoff,
     sorted_cval = sorted(
         cvalue_output.items(), key=lambda item: item[1], reverse=True)
     test = [k for k, v in sorted_cval]
+    #with open('candidatos.txt', 'w') as asd:
+    #    asd.write(
+    #        '\n'.join(
+    #            [str(round(x[1], 2))+'\t'+x[0].encode('utf-8')
+    #             for x in sorted_cval]))
     print phrase_pattern.strip()
     print min_freq, binom_cutoff, min_cvalue
     stats = precision_recall_stats(reference, test, num_bins)
@@ -299,12 +304,15 @@ def run_experiment(phrase_pattern, min_freq, binom_cutoff,
 def main():
     """docstring for main"""
 
+    #pattern = r"""  # small corpus
+    #    TC: {<NC>+<AQ>*(<PDEL><DA>?<NC>+<AQ>*)?}
+    #    """
     pattern = r"""
-        TC: {<NC>+<AQ>*(<PDEL><DA>?<NC>+<AQ>*)?}
+        TC: {<NC>+<AQ>*}
         """
     min_freq = 1
     binom_cutoff = 0.0
-    min_cvalue = 5.0
+    min_cvalue = 10.0
     num_bins = 4
 
     run_experiment(pattern, min_freq, binom_cutoff,
