@@ -289,6 +289,13 @@ def calc_morph_coef(candidate, term_model, gen_model, s=0.001,
     return morph_coef
 
 
+def calc_syntactic_coef(pos_pattern, term_model):
+    """docstring for calc_syntactic_coef"""
+    syn_coef = term_model['pos_freq'][pos_pattern] / \
+        sum(term_model['pos_freq'].values())
+    return syn_coef
+
+
 def main():
     """docstring for main"""
 
@@ -300,19 +307,34 @@ def main():
 
     anal_corp = load_analysis()
 
-    candidate_score = []
+    candidate_scores = []
 
     pos_patterns = term_model['pos_freq'].keys()
     for pos_seq in pos_patterns:
-        print pos_seq
-        chunks = list(set(chunk_sents(pos_seq, anal_corp)))
-        for candidate in chunks:
+        syn_coef = calc_syntactic_coef(pos_seq, term_model)
+        #print pos_seq
+        chunks = chunk_sents(pos_seq, anal_corp)
+        chunk_freq_dict = defaultdict(int)
+        for chnk in chunks:
+            chunk_freq_dict[chnk] += 1
+
+        for candidate in chunk_freq_dict.keys():
+            cand_freq = chunk_freq_dict[candidate]
             lex_coef = calc_lexical_coef(candidate, term_model, gen_model)
             morph_coef = calc_morph_coef(candidate, term_model, gen_model)
-            print candidate
-            print lex_coef
-            print morph_coef
-            raw_input()
+            candidate_coef = cand_freq * syn_coef * lex_coef * morph_coef
+            #print candidate
+            #print cand_freq
+            #print lex_coef
+            #print morph_coef
+            #print syn_coef
+            #print 'SCORE:', candidate_coef
+            #raw_input()
+            candidate_scores.append((candidate_coef, candidate),)
+
+    for scored_cand in sorted(candidate_scores, reverse=True)[:30]:
+        print scored_cand[0], scored_cand[1]
+
 
 if __name__ == '__main__':
     main()
