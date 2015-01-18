@@ -134,9 +134,9 @@ def chunk_sents(pos_sequence, tagged_sents):
     return chunks
 
 
-def calc_lexical_score(candidate, term_model, gen_model, s=0.001,
-                       stoplist=['del']):
-    """docstring for calc_lexical_score"""
+def calc_lexical_coef(candidate, term_model, gen_model, s=0.001,
+                      stoplist=['del']):
+    """docstring for calc_lexical_coef"""
 
     term_lemma_num = sum(term_model['lemma_freq'].values())
     gen_lemma_sum = sum(gen_model['lemma_freq'].values())
@@ -166,6 +166,129 @@ def calc_lexical_score(candidate, term_model, gen_model, s=0.001,
     return lexical_coef
 
 
+def calc_morph_coef(candidate, term_model, gen_model, s=0.001,
+                    stoplist=['del']):
+    """docstring for calc_morph_coef"""
+
+    lem_f3_score_list = []
+    term_lf3_num = sum(term_model['lemma_f3'].values())
+    gen_lf3_num = sum(gen_model['lemma_f3'].values())
+
+    lem_f4_score_list = []
+    term_lf4_num = sum(term_model['lemma_f4'].values())
+    gen_lf4_num = sum(gen_model['lemma_f4'].values())
+
+    lem_f5_score_list = []
+    term_lf5_num = sum(term_model['lemma_f5'].values())
+    gen_lf5_num = sum(gen_model['lemma_f5'].values())
+
+    lem_l3_score_list = []
+    term_ll3_num = sum(term_model['lemma_l3'].values())
+    gen_ll3_num = sum(gen_model['lemma_l3'].values())
+
+    lem_l4_score_list = []
+    term_ll4_num = sum(term_model['lemma_l4'].values())
+    gen_ll4_num = sum(gen_model['lemma_l4'].values())
+
+    lem_l5_score_list = []
+    term_ll5_num = sum(term_model['lemma_l5'].values())
+    gen_ll5_num = sum(gen_model['lemma_l5'].values())
+
+    lemmas = [w.rsplit('/', 2)[0] for w in candidate.split()]
+    for lem in lemmas:
+        if lem in stoplist:
+            continue
+
+        lf3_affix = lem[:3]
+        relative_lf3_freq_in_terms = 0.0
+        if len(lf3_affix) == 3 and lf3_affix in term_model['lemma_f3'].keys():
+            relative_lf3_freq_in_terms = \
+                term_model['lemma_f3'][lf3_affix] / term_lf3_num
+        relative_lf3_freq_in_gen = 0.0
+        if len(lf3_affix) == 3 and lf3_affix in gen_model['lemma_f3'].keys():
+            relative_lf3_freq_in_gen = \
+                gen_model['lemma_f3'][lf3_affix] / gen_lf3_num
+        lf3_score = \
+            relative_lf3_freq_in_terms / (relative_lf3_freq_in_gen + s)
+        lem_f3_score_list.append(lf3_score)
+
+        lf4_affix = lem[:4]
+        relative_lf4_freq_in_terms = 0.0
+        if len(lf4_affix) == 4 and lf4_affix in term_model['lemma_f4'].keys():
+            relative_lf4_freq_in_terms = \
+                term_model['lemma_f4'][lf4_affix] / term_lf4_num
+        relative_lf4_freq_in_gen = 0.0
+        if len(lf4_affix) == 4 and lf4_affix in gen_model['lemma_f4'].keys():
+            relative_lf4_freq_in_gen = \
+                gen_model['lemma_f4'][lf4_affix] / gen_lf4_num
+        lf4_score = \
+            relative_lf4_freq_in_terms / (relative_lf4_freq_in_gen + s)
+        lem_f4_score_list.append(lf4_score)
+
+        lf5_affix = lem[:5]
+        relative_lf5_freq_in_terms = 0.0
+        if len(lf5_affix) == 5 and lf5_affix in term_model['lemma_f5'].keys():
+            relative_lf5_freq_in_terms = \
+                term_model['lemma_f5'][lf5_affix] / term_lf5_num
+        relative_lf5_freq_in_gen = 0.0
+        if len(lf5_affix) == 5 and lf5_affix in gen_model['lemma_f5'].keys():
+            relative_lf5_freq_in_gen = \
+                gen_model['lemma_f5'][lf5_affix] / gen_lf5_num
+        lf5_score = \
+            relative_lf5_freq_in_terms / (relative_lf5_freq_in_gen + s)
+        lem_f5_score_list.append(lf5_score)
+
+        ll3_affix = lem[-3:]
+        relative_ll3_freq_in_terms = 0.0
+        if len(ll3_affix) == 3 and ll3_affix in term_model['lemma_l3'].keys():
+            relative_ll3_freq_in_terms = \
+                term_model['lemma_l3'][ll3_affix] / term_ll3_num
+        relative_ll3_freq_in_gen = 0.0
+        if len(ll3_affix) == 3 and ll3_affix in gen_model['lemma_l3'].keys():
+            relative_ll3_freq_in_gen = \
+                gen_model['lemma_l3'][ll3_affix] / gen_ll3_num
+        ll3_score = \
+            relative_ll3_freq_in_terms / (relative_ll3_freq_in_gen + s)
+        lem_l3_score_list.append(ll3_score)
+
+        ll4_affix = lem[-4:]
+        relative_ll4_freq_in_terms = 0.0
+        if len(ll4_affix) == 4 and ll4_affix in term_model['lemma_l4'].keys():
+            relative_ll4_freq_in_terms = \
+                term_model['lemma_l4'][ll4_affix] / term_ll4_num
+        relative_ll4_freq_in_gen = 0.0
+        if len(ll4_affix) == 4 and ll4_affix in gen_model['lemma_l4'].keys():
+            relative_ll4_freq_in_gen = \
+                gen_model['lemma_l4'][ll4_affix] / gen_ll4_num
+        ll4_score = \
+            relative_ll4_freq_in_terms / (relative_ll4_freq_in_gen + s)
+        lem_l4_score_list.append(ll4_score)
+
+        ll5_affix = lem[-5:]
+        relative_ll5_freq_in_terms = 0.0
+        if len(ll5_affix) == 5 and ll5_affix in term_model['lemma_l5'].keys():
+            relative_ll5_freq_in_terms = \
+                term_model['lemma_l5'][ll5_affix] / term_ll5_num
+        relative_ll5_freq_in_gen = 0.0
+        if len(ll5_affix) == 5 and ll5_affix in gen_model['lemma_l5'].keys():
+            relative_ll5_freq_in_gen = \
+                gen_model['lemma_l5'][ll5_affix] / gen_ll5_num
+        ll5_score = \
+            relative_ll5_freq_in_terms / (relative_ll5_freq_in_gen + s)
+        lem_l5_score_list.append(ll5_score)
+
+    lf3_coef = sum(lem_f3_score_list) / len(lem_f3_score_list)
+    lf4_coef = sum(lem_f4_score_list) / len(lem_f4_score_list)
+    lf5_coef = sum(lem_f5_score_list) / len(lem_f5_score_list)
+    ll3_coef = sum(lem_l3_score_list) / len(lem_l3_score_list)
+    ll4_coef = sum(lem_l4_score_list) / len(lem_l4_score_list)
+    ll5_coef = sum(lem_l5_score_list) / len(lem_l5_score_list)
+
+    morph_coef = (lf3_coef + lf4_coef + lf5_coef +
+                  ll3_coef + ll4_coef + ll5_coef) / 6
+    return morph_coef
+
+
 def main():
     """docstring for main"""
 
@@ -184,10 +307,11 @@ def main():
         print pos_seq
         chunks = list(set(chunk_sents(pos_seq, anal_corp)))
         for candidate in chunks:
-            lex_coef = calc_lexical_score(candidate, term_model, gen_model)
-            # morph_coef = ...
+            lex_coef = calc_lexical_coef(candidate, term_model, gen_model)
+            morph_coef = calc_morph_coef(candidate, term_model, gen_model)
             print candidate
             print lex_coef
+            print morph_coef
             raw_input()
 
 if __name__ == '__main__':
