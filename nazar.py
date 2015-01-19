@@ -4,6 +4,7 @@
 
 from __future__ import division
 from collections import defaultdict
+import random
 import nltk
 
 
@@ -296,11 +297,48 @@ def calc_syntactic_coef(pos_pattern, term_model):
     return syn_coef
 
 
+def generate_bins(item_list, num_bins):
+    """docstring for generate_bins"""
+    start_index = 0
+    for bin_num in xrange(num_bins):
+        end_index = start_index + len(item_list[bin_num::num_bins])
+        yield item_list[start_index:end_index]
+        start_index = end_index
+
+
+def remove_str_postags(tagged_str):
+    """docstring for remove_str_postags"""
+    stripped_str = ' '.join([w.split('/')[0] for w in tagged_str.split()])
+    return stripped_str
+
+
+def precision_recall(reference_list, sorted_test_list, num_bins):
+    """docstring for precision_recall"""
+    ref_set = set(reference_list)  # All terms
+    test_set = set(sorted_test_list)  # All candidates sorted by score
+    print 'Candidates:', len(test_set)
+    print 'Real Terms:', len(test_set.intersection(ref_set))
+    print '=' * 4
+
+    for segment in generate_bins(sorted_test_list, num_bins):
+        seg_pval = nltk.metrics.precision(ref_set, set(segment))
+        print round(seg_pval, 2)
+    print '=' * 4
+
+    pval = nltk.metrics.precision(ref_set, test_set)
+    rval = nltk.metrics.recall(ref_set, test_set)
+    print round(pval, 2)
+    print round(rval, 2)
+
+
 def main():
     """docstring for main"""
 
+    training_size = 889  # de 1778
     term_corp = load_terms()
-    term_model = make_term_model(term_corp)
+    random.shuffle(term_corp)
+    term_training = term_corp[:training_size]
+    term_model = make_term_model(term_training)
 
     gen_corp = load_general()
     gen_model = make_general_model(gen_corp)
@@ -312,7 +350,6 @@ def main():
     pos_patterns = term_model['pos_freq'].keys()
     for pos_seq in pos_patterns:
         syn_coef = calc_syntactic_coef(pos_seq, term_model)
-        #print pos_seq
         chunks = chunk_sents(pos_seq, anal_corp)
         chunk_freq_dict = defaultdict(int)
         for chnk in chunks:
@@ -323,17 +360,12 @@ def main():
             lex_coef = calc_lexical_coef(candidate, term_model, gen_model)
             morph_coef = calc_morph_coef(candidate, term_model, gen_model)
             candidate_coef = cand_freq * syn_coef * lex_coef * morph_coef
-            #print candidate
-            #print cand_freq
-            #print lex_coef
-            #print morph_coef
-            #print syn_coef
-            #print 'SCORE:', candidate_coef
-            #raw_input()
             candidate_scores.append((candidate_coef, candidate),)
+    candidate_scores = sorted(candidate_scores, reverse=True)
 
-    for scored_cand in sorted(candidate_scores, reverse=True)[:30]:
-        print scored_cand[0], scored_cand[1]
+    no_tags_term_corp = [remove_str_postags(s) for s in term_corp]
+    no_tags_candidates = [remove_str_postags(c[1]) for c in candidate_scores]
+    precision_recall(no_tags_term_corp, no_tags_candidates, 4)
 
 
 if __name__ == '__main__':
