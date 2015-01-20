@@ -339,6 +339,7 @@ def main():
     random.shuffle(term_corp)
     term_training = term_corp[:training_size]
     term_model = make_term_model(term_training)
+    term_test = term_corp[training_size:]
 
     gen_corp = load_general()
     gen_model = make_general_model(gen_corp)
@@ -363,7 +364,10 @@ def main():
             candidate_scores.append((candidate_coef, candidate),)
     candidate_scores = sorted(candidate_scores, reverse=True)
 
-    no_tags_term_corp = [remove_str_postags(s) for s in term_corp]
+    # Test on all terms
+    #no_tags_term_corp = [remove_str_postags(s) for s in term_corp]
+    # Test on other (not training) terms
+    no_tags_term_corp = [remove_str_postags(s) for s in term_test]
     no_tags_candidates = [remove_str_postags(c[1]) for c in candidate_scores]
     precision_recall(no_tags_term_corp, no_tags_candidates, 4)
 
