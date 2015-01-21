@@ -6,6 +6,7 @@ from __future__ import division
 from collections import defaultdict
 import random
 import nltk
+import binom
 
 
 # Corpus consisting of list of real terms
@@ -331,6 +332,25 @@ def precision_recall(reference_list, sorted_test_list, num_bins):
     print round(rval, 2)
 
 
+def binom_ratio_filter(candidate_freq_dict, cutoff):
+    """doctsring for binom_ratio_filter"""
+    kept_phrases = []
+    disc_phrases = []
+    br_under_cutoff = binom.main(cutoff)
+    for nom_phrase in candidate_freq_dict.keys():
+        keep_phrase = True
+        nom_phrase_div = nom_phrase.split()
+        for lt_ref in nom_phrase_div:
+            if lt_ref in br_under_cutoff.keys():
+                keep_phrase = False
+                break
+        if keep_phrase is True:
+            kept_phrases.append((nom_phrase, candidate_freq_dict[nom_phrase]),)
+        else:
+            disc_phrases.append((nom_phrase, candidate_freq_dict[nom_phrase]),)
+    return dict(kept_phrases), dict(disc_phrases)
+
+
 def main():
     """docstring for main"""
 
@@ -356,7 +376,12 @@ def main():
         for chnk in chunks:
             chunk_freq_dict[chnk] += 1
 
-        for candidate in chunk_freq_dict.keys():
+        # Binom filter
+        #TODO: min_nazar_val
+        binom_cutoff = 1.5
+        accepted_phrases = binom_ratio_filter(chunk_freq_dict, binom_cutoff)[0]
+
+        for candidate in accepted_phrases.keys():
             cand_freq = chunk_freq_dict[candidate]
             lex_coef = calc_lexical_coef(candidate, term_model, gen_model)
             morph_coef = calc_morph_coef(candidate, term_model, gen_model)
@@ -369,6 +394,7 @@ def main():
     # Test on other (not training) terms
     no_tags_term_corp = [remove_str_postags(s) for s in term_test]
     no_tags_candidates = [remove_str_postags(c[1]) for c in candidate_scores]
+    print 'binom cutoff:', binom_cutoff
     precision_recall(no_tags_term_corp, no_tags_candidates, 4)
 
 
