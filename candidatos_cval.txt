@@ -1,0 +1,2531 @@
+1274.87	ojo
+317.52	visión
+306.5	médico
+299.47	medicamento
+277.7	síntoma
+275.08	examen
+242.65	tratamiento
+218.43	pérdida del visión
+203.14	cirugía
+191.5	retina
+177.6	degeneración macular
+175.11	catarata
+168.73	glaucoma
+160.9	enfermedad
+128.5	dolor
+120.6	párpado
+120.0	nervio óptico
+118.67	diabetes
+117.0	oculista
+113.0	infección
+103.67	córnea
+102.0	visión borroso
+100.0	paciente
+93.0	afección
+91.94	gota
+85.86	vaso sanguíneo
+84.42	lesión
+80.0	retinopatía diabético
+79.67	cerebro
+75.0	pronóstico
+74.96	desprendimiento del retina
+74.96	enfermedad del ojo
+69.8	pupila
+68.5	sangre
+67.21	lámpara del hendidura
+67.21	examen del ojo
+67.0	melatonina
+66.0	enfermedad diabético del ojo
+64.5	frecuencia
+63.71	cristalino
+60.94	conjuntivitis
+60.33	oftalmólogo
+59.89	complicación
+59.45	superficie del ojo
+58.74	presión
+57.75	alergia
+56.87	dilatación del pupila
+56.87	presión del ojo
+55.74	piel
+55.0	enfermedad mitocóndricas
+55.0	ceguera
+53.0	dificultad
+51.0	menudo
+47.0	bebé
+46.8	iris
+44.88	signo
+43.94	enrojecimiento del ojo
+43.46	líquido
+43.45	trastorno
+43.0	párpado inferior
+41.5	inflamación
+41.36	lesión del ojo
+41.36	degeneración macular seco
+40.0	dosis
+40.0	miopía
+40.0	ojo seco
+38.77	degeneración macular húmedo
+38.0	dolor ocular
+38.0	cirugía láser
+37.67	sensibilidad
+37.0	cuerpo
+36.82	tumor
+35.43	láser
+35.0	anteojo
+34.0	nariz
+33.8	gafas
+33.6	cirugía del ojo
+33.41	síndrome
+33.0	gota oftálmico
+32.5	incidencia
+31.33	examen ocular
+31.12	nervio
+31.02	tamaño del pupila
+31.0	farmacéutico
+30.25	hinchazón
+30.0	párpado inferior del ojo
+29.43	enrojecimiento
+29.19	tipo
+29.0	picazón
+28.43	infección del ojo
+28.43	disminución del visión
+28.43	cirugía del catarata
+28.0	ardor
+28.0	melanoma intraocular
+28.0	presión arterial
+27.75	retinoblastoma
+27.0	vaso sanguíneo del retina
+27.0	estrabismo
+27.0	mácula
+26.75	tamaño
+26.29	músculo
+26.0	presión intraocular
+26.0	cuerpo ciliar
+25.85	ud
+25.85	distrofia del fuchs
+25.85	examen del sangre
+25.85	tipo del glaucoma
+25.85	hidróxido del amonio
+25.58	tejido
+25.57	diagnóstico
+25.0	pestaña
+24.0	envejecimiento
+24.0	ojo bizco
+24.0	catarata congénito
+23.38	bacteria
+23.26	dolor del garganta
+23.26	tipo del cirugía
+23.26	cristalino del ojo
+23.26	fiebre del heno
+23.0	jabón
+22.0	cirugía convencional
+22.0	debilidad muscular
+22.0	vómito
+22.0	infección corneal
+22.0	lesión ocular
+22.0	rinitis alérgico
+21.86	lente
+20.68	superficie del córnea
+20.0	receta
+20.0	presión ocular
+20.0	quemadura
+20.0	cirugía lasik
+20.0	rejilla
+20.0	ojo lloroso
+20.0	lagrimeo
+20.0	conjuntivitis agudo
+20.0	nervio craneal
+20.0	ungüento oftálmico
+19.85	cáncer
+19.71	célula
+19.5	vitamina
+19.5	resequedad
+19.0	fármaco
+19.0	mejilla
+19.0	método
+18.71	ictericia
+18.6	cefalea
+18.09	parálisis del bell
+18.09	suplemento del dieta
+18.09	cirugía del párpado
+18.09	aplicador del algodón
+18.09	lente del ojo
+18.09	latencia del sueño
+18.09	secreción del ojo
+18.0	anzuelo
+18.0	intoxicación
+18.0	diabetes tipo
+18.0	conjuntivitis alérgico
+18.0	pediatra
+18.0	artritis reumatoideo
+18.0	tomografía
+18.0	nistagmo
+17.55	irritación
+17.4	boca
+17.0	agudeza visual
+17.0	daltonismo
+17.0	convulsión
+16.55	terapia
+16.5	sueño
+16.25	abrasión
+16.2	sustancia
+16.14	conjuntiva
+16.0	oxígeno
+16.0	náusea
+16.0	úlcera corneal
+16.0	lesión penetrante
+16.0	enfermedad ocular
+15.8	timolol
+15.51	inflamación del ojo
+15.51	retina del ojo
+15.51	etiqueta del medicamento
+15.51	líquido del ojo
+15.51	tipo del catarata
+15.51	deficiencia del vitamina
+15.51	transplante del córnea
+15.51	trasplante del córnea
+15.5	prescripción
+15.2	suplemento
+15.2	úlcera
+15.0	cmv
+15.0	obstrucción del conducto lagrimal
+15.0	resonancia magnético
+15.0	hierba
+15.0	síndrome del ojo seco
+14.83	ungüento
+14.5	parche
+14.0	tracoma
+14.0	latanoprost
+14.0	travoprost
+14.0	rayo láser
+14.0	glaucoma congénito
+14.0	punción lumbar
+14.0	tinte
+14.0	cirugía ocular
+14.0	abrasión corneal
+14.0	miopatía mitocóndricas
+14.0	ojo saltón
+13.83	mutación
+13.8	mitocondria
+13.67	esclerótica
+13.67	colirio
+13.25	oído
+13.2	defecto
+13.0	envase
+13.0	ilustración
+13.0	presbicia
+13.0	alergeno
+12.92	tratamiento del glaucoma
+12.92	irritación del ojo
+12.92	esclerótica del ojo
+12.92	enfermedad del lyme
+12.92	anatomía del ojo
+12.92	examen oftalmológico estándar
+12.92	vaso sanguíneo anormal
+12.92	melanoma del ojo
+12.92	examen del refracción
+12.92	tipo del tratamiento
+12.92	pupila del ojo
+12.92	hisopo del algodón
+12.33	cirujano
+12.13	disminución
+12.0	pérdida del visión periférico
+12.0	glucosa
+12.0	hígado
+12.0	prurito
+12.0	examen del agudeza visual
+12.0	ambliopía
+12.0	traumatismo craneal
+12.0	astigmatismo
+12.0	ojo perezoso
+12.0	gota anestésico
+12.0	retinoblastoma hereditario
+12.0	visión saludable
+12.0	fibra nervioso
+12.0	músculo ocular
+12.0	soldadura
+12.0	dolor articular
+12.0	enfermedad mitocondricas
+12.0	ojo sano
+12.0	edema macular
+12.0	trastorno autoinmunitario
+12.0	bebé prematuro
+12.0	terapia fotodinámico
+12.0	garganta
+11.75	sensación
+11.5	uveítis
+11.0	probabilidad
+11.0	precaución
+11.0	partícula
+11.0	zinc
+11.0	factor
+11.0	coroides
+11.0	polen
+11.0	tapa
+10.5	proteína
+10.34	resequedad del boca
+10.34	ecografía del ojo
+10.34	síntoma del glaucoma
+10.34	dosis del melatonina
+10.34	tejido del ojo
+10.34	retinopatía del prematuridad
+10.34	síndrome del sjogren
+10.34	músculo del ojo
+10.34	síndrome del waardenburg
+10.34	síndrome del sjögren
+10.34	cicatrización del córnea
+10.34	examen del diagnóstico
+10.34	síndrome del leigh
+10.34	iris del ojo
+10.34	síndrome del parinaud
+10.34	coloboma del iris
+10.34	pulgada del ungüento
+10.34	examen del retina
+10.34	ojo del bebé
+10.34	lente del policarbonato
+10.34	acumulación del proteína
+10.34	alteración del sueño
+10.34	pérdida del oído
+10.33	traumatismo
+10.33	fiebre
+10.15	secreción
+10.0	congestión nasal
+10.0	examen neurológico
+10.0	dedo pulgar
+10.0	pars planitis
+10.0	cuello
+10.0	hiperopía
+10.0	nistagmo congénito
+10.0	lagrimeo excesivo
+10.0	lesión corneal
+10.0	anestesia
+10.0	olfato
+10.0	hemorragia subconjuntival
+10.0	médula espinal
+10.0	asma
+10.0	miopatía mitocóndrica
+10.0	riñón
+10.0	glándula lagrimal
+10.0	presión sanguíneo
+10.0	tonometría
+10.0	nervio facial
+10.0	enfermedad autoinmunitario
+10.0	antihistamínico
+10.0	erupción cutáneo
+10.0	conjuntivitis neonatal
+10.0	oftalmoscopia
+10.0	moho
+10.0	corticosteroide
+9.75	combinación
+9.67	escarlatina
+9.44	pérdida
+9.2	enfermedad mitocóndrica
+9.0	vaso sanguíneo del ojo
+9.0	disminución del agudeza visual
+9.0	albinismo
+9.0	oclusión del vaso retiniano
+9.0	extirpación quirúrgico del piel
+9.0	obstrucción del conducto lacrimal
+9.0	incisión
+9.0	fluoresceína
+9.0	articulación
+9.0	orificio
+9.0	mononeuropatía
+9.0	parálisis del nervio facial
+8.67	hemorragia
+8.6	corazón
+8.5	antibiótico
+8.0	insuficiencia renal
+8.0	heterocromía
+8.0	rayo ultravioleta
+8.0	retinitis pigmentoso
+8.0	pulmón
+8.0	caspa
+8.0	enfermedad neuromuscular
+8.0	dificultad respiratorio
+8.0	halo
+8.0	glioma óptico
+8.0	azúcar
+8.0	defecto genético
+8.0	esófago
+8.0	célula maligno
+8.0	síntoma común
+8.0	fotofobia
+8.0	encefalomiopatía mitocóndrica
+8.0	alcohol
+8.0	cansancio ocular
+8.0	lio
+8.0	tinte marrón
+8.0	ptosis
+8.0	esteroide
+8.0	bilirrubina
+8.0	trastorno subyacente
+8.0	retinopexia neumático
+8.0	parche ocular
+8.0	lente corrector
+8.0	anormalidad cerebral
+8.0	queratoconjuntivitis seco
+8.0	mareo
+8.0	crema
+8.0	ataxia
+8.0	queratitis herpético
+8.0	hipertensión arterial
+8.0	queratotomía radial
+8.0	acidosis lácteo
+7.75	sequedad del ojo
+7.75	infección del membrana
+7.75	tipo del cáncer
+7.75	disminución del sensibilidad
+7.75	secreción del melatonina
+7.75	bacteria del piel
+7.75	espora del moho
+7.75	lupus eritematoso sistémico
+7.75	presión del líquido
+7.75	síntoma del conjuntivitis
+7.75	dolor del ojo
+7.75	gota oftálmico antibiótico
+7.75	síntoma del alergia
+7.75	tipo del conjuntivitis
+7.75	infección del córnea
+7.75	inflamación del párpado
+7.75	tipo del examen
+7.75	sensación del ardor
+7.75	protrusión del ojo
+7.75	tipo del cefalea
+7.75	duración del sueño
+7.75	diagrama del ojo
+7.75	institutes of health
+7.75	suplemento del vitamina
+7.75	síndrome del down
+7.75	inflamación del conjuntiva
+7.75	tamaño del tumor
+7.67	retinitis
+7.67	fatiga
+7.5	cráneo
+7.16	gen
+7.0	hematoma
+7.0	warfarina
+7.0	lave
+7.0	tacto
+7.0	eficacia
+7.0	estrés
+7.0	drusa
+7.0	cabello
+7.0	sangrado
+7.0	enciclopedia
+7.0	sarcoidosis
+6.75	espasmo
+6.25	cicatrización
+6.0	secreción nasal
+6.0	nei
+6.0	hipertensión ocular
+6.0	aerosol nasal
+6.0	adn mitocóndrico
+6.0	glaucoma agudo
+6.0	tejido subyacente
+6.0	capa del vaso sanguíneo
+6.0	mda
+6.0	rubéola congénito
+6.0	queratitis bacterial
+6.0	infección bacteriano
+6.0	ceguera congénito
+6.0	traumatismo ocular
+6.0	trastorno genético
+6.0	cirugía refractivo del córnea
+6.0	miligramo del vitamina c
+6.0	enfermedad sistémico
+6.0	examen del visión cromático
+6.0	conjuntivitis viral
+6.0	estómago
+6.0	frecuencia respiratorio
+6.0	químico
+6.0	mtadn
+6.0	medicamento antiviral
+6.0	enfermedad crónico
+6.0	sordera
+6.0	detección temprano
+6.0	sobredosis
+6.0	cirugía del rayo láser
+6.0	membrana mucoso
+6.0	queratoplastia penetrante
+6.0	espasmo muscular
+6.0	tratamiento del enfermedad mitocóndricas
+6.0	biopsia muscular
+6.0	pierna
+6.0	enfermedad infeccioso
+6.0	lente bifocal
+6.0	pastilla
+6.0	punción raquídeo
+6.0	neuritis óptico
+6.0	insulina
+6.0	medicamento adelgazantes del sangre
+6.0	hipermetropía
+6.0	síntoma ocular
+6.0	cirujano oftalmólogo
+6.0	cafeína
+6.0	depresión
+6.0	tc
+6.0	gota oftálmico del timolol
+6.0	examen oftalmológico
+6.0	síntoma del infección ocular
+6.0	desbridamiento cutáneo
+6.0	ojo reseco
+6.0	trastorno convulsivo
+6.0	vacuna antialérgico
+6.0	orzuelo
+6.0	ictericia fisiológico
+6.0	entropión
+6.0	célula muscular
+6.0	infección común del ojo
+6.0	parálisis facial
+6.0	electrón
+6.0	conjuntivitis bacteriano
+6.0	and strabismus
+6.0	embarazada
+6.0	trastorno inflamatorio
+6.0	resonancia magnético del cerebro
+6.0	loción
+6.0	tipo del degeneración macular
+6.0	sutura
+6.0	profesional
+6.0	sustancia específico
+6.0	sustancia irritante
+6.0	tejido cicatricial
+6.0	dieta
+6.0	iritis
+6.0	uveítis posterior
+6.0	síntoma del enfermedad mitocóndricas
+6.0	cirugía refractivo del ojo
+5.67	arteria
+5.5	erupción
+5.5	pared
+5.33	ecografía
+5.2	membrana
+5.17	albinismo del tipo
+5.17	abultamiento del párpado
+5.17	miligramo del melatonina
+5.17	cirugía del extirpación
+5.17	colirio del prednisolona
+5.17	jaqueca tipo migraña
+5.17	degeneración macular temprano
+5.17	irritación del superficie
+5.17	extirpación del ojo
+5.17	lesión corneal penetrante
+5.17	tipo del hipoacusia
+5.17	tipo del albinismo
+5.17	trastorno del sueño
+5.17	complicación del prematuridad
+5.17	terapia del habla
+5.17	curvatura del córnea
+5.17	transductor del ultrasonido
+5.17	almohadilla del grasa
+5.17	pliegue del piel
+5.17	examen del fluoresceína
+5.17	cirugía del córnea
+5.17	radiografía del cráneo
+5.17	funda del almohada
+5.17	examen ocular estándar
+5.17	porción del cristalino
+5.17	tipo del lesión
+5.17	tratamiento del conjuntivitis
+5.17	tipo del mononeuropatía
+5.17	tejido del retina
+5.17	herpes zóster oftálmico
+5.17	hidróxido del sodio
+5.17	irritación del córnea
+5.17	síndrome del dubin
+5.17	síndrome del rotor
+5.17	eversión del párpado
+5.17	signo del enfermedad
+5.17	pared del ojo
+5.17	enfermedad del behcet
+5.17	enfermedad del crohn
+5.17	trastorno del ojo
+5.17	médico del ojo
+5.17	abrasión del córnea
+5.17	tubo del respiración
+5.17	capa del tejido
+5.17	enfermedad del corazón
+5.17	anomalía del ojo
+5.17	tipo del pérdida
+5.17	vaina del mielina
+5.17	músculo del párpado
+5.17	conteo del esperma
+5.17	sensación del sequedad
+5.17	variedad del síntoma
+5.17	erupción del escarlatina
+5.17	pérdida del apetito
+5.17	cloruro del benzalconio
+5.17	pérdida del audición
+5.17	úlcera del decúbito
+5.17	coágulo del sangre
+5.17	coagulación del sangre
+5.17	ilustración del ojo
+5.17	progresión del enfermedad
+5.17	síntoma del parálisis
+5.17	trastorno del retina
+5.17	signo del infección
+5.17	córnea del ojo
+5.17	superficie del retina
+5.17	defecto del corazón
+5.17	tinción del ojo
+5.17	síndrome del waardenberg
+5.17	nervio del ojo
+5.17	cirugía del retina
+5.17	enrojecimiento del párpado
+5.17	examen oftálmico estándar
+5.17	incidencia del convulsión
+5.17	disminución del lagrimeo
+5.17	biopsia del tejido
+5.17	síntoma del inflamación
+5.17	combinación del vitamina
+5.17	inflamación del tejido
+5.17	enfermedad del retina
+5.17	síntoma del dolor
+5.17	diseminación del tumor
+5.17	prescripción del gafas
+5.17	vaso
+5.17	melanoma
+5.0	sonda
+5.0	osha
+5.0	severidad
+5.0	toxicidad
+5.0	colesterol
+5.0	estreptococo
+5.0	inyección
+5.0	radioterapia
+5.0	glucemia
+5.0	bastoncillo
+5.0	monitor
+5.0	clamidia
+5.0	somnolencia
+5.0	vitrectomía
+5.0	colgajo
+5.0	colorante
+5.0	angiografía
+5.0	quimioterapia
+5.0	dedo
+5.0	regularidad
+5.0	suciedad
+5.0	supuración
+5.0	folleto
+5.0	estreñimiento
+5.0	presbiopía
+5.0	estornudo
+5.0	fda
+5.0	toalla
+5.0	blefaritis
+5.0	lasik
+5.0	béisbol
+5.0	alivio
+5.0	adolescencia
+5.0	libre
+5.0	nutrición
+5.0	sedante
+5.0	oftalmoscopio
+5.0	dispositivo
+5.0	apoplejía
+4.82	capa
+4.67	sonido
+4.67	radiación
+4.63	parálisis
+4.6	pred
+4.5	saliva
+4.5	grasa
+4.5	prednisolona
+4.5	audición
+4.38	deficiencia
+4.0	gasa estéril
+4.0	músculo extraocular
+4.0	enfermedad hereditario
+4.0	entumecimiento
+4.0	mancha borroso
+4.0	retinopatía proliferativo
+4.0	enfermedad viral
+4.0	tejido corneal
+4.0	examen diagnóstico
+4.0	ictericia patológico
+4.0	carnitina
+4.0	gonorrea
+4.0	electrorretinografía
+4.0	fibroplasia retrolenticular
+4.0	anteojo común
+4.0	albinismo ocular
+4.0	cortadura
+4.0	pliegue epicántico
+4.0	tejido conectivo
+4.0	aneurisma cerebral
+4.0	tratamiento precoz
+4.0	ojo saludable
+4.0	enfermedad cerebral
+4.0	hongo
+4.0	pred mild
+4.0	enrojecimiento ocular
+4.0	rasguño
+4.0	herpes
+4.0	linfoma
+4.0	dietista
+4.0	descongestionante
+4.0	traumatismo cerebral
+4.0	enfermedad subyacente
+4.0	lesión cutáneo
+4.0	mitocondria defectuoso
+4.0	telilla lagrimal
+4.0	vacuna antitetánico
+4.0	glaucoma pigmentario
+4.0	ecografía ocular
+4.0	alergeno específico
+4.0	mutación raro
+4.0	insomnio
+4.0	frecuencia cardíaco
+4.0	sensación urente
+4.0	desprendimiento retinal
+4.0	nervio auditivo
+4.0	beta
+4.0	infección viral
+4.0	debilidad
+4.0	esclerosis tuberoso
+4.0	líquido gelatinoso
+4.0	úlcera bucal
+4.0	pomada
+4.0	gota ocular
+4.0	gota dilatador
+4.0	seno paranasal
+4.0	hipertiroidismo
+4.0	hepatitis autoinmunitario
+4.0	folículo piloso
+4.0	retinitis pigmentario
+4.0	hepatitis
+4.0	diarrea crónico
+4.0	hez
+4.0	trabeculoplastia
+4.0	ibuprofeno
+4.0	superficie ocular
+4.0	lactancia
+4.0	vibración
+4.0	gel oftálmico
+4.0	lente intraocular
+4.0	presión intracraneal
+4.0	dolor abdominal
+4.0	arteria retiniano
+4.0	gota antibiótico
+4.0	toxina
+4.0	infección ocular
+4.0	infección cutáneo
+4.0	lesión craneal
+4.0	microscopio
+4.0	quemadura solar
+4.0	suplemento dietético
+4.0	queratitis micótico
+4.0	queratomileusis in
+4.0	gen defectuoso
+4.0	tos
+4.0	optometrista
+4.0	tumor cerebral
+4.0	anemia hemolítico
+4.0	cigarrillo
+4.0	ungüento antibiótico
+4.0	apósito estéril
+4.0	cavidad óseo
+4.0	miopatía mitocóndria
+4.0	calambre
+4.0	secreción ocular
+4.0	medicamento insensibilizador
+4.0	panfleto
+4.0	cirugía facial
+4.0	visión binocular
+4.0	agujero
+4.0	fatiga visual
+4.0	papila gustativo
+4.0	dolor muscular
+4.0	medicamento anticonvulsivo
+4.0	hepatitis d
+4.0	hepatitis c
+4.0	roncha
+4.0	radiación uv
+4.0	tratamiento temprano
+4.0	hueso
+4.0	trastorno mitocóndrico
+4.0	espondilitis anquilosante
+4.0	hepatitis viral
+4.0	envenenamiento
+4.0	vaso anormal
+4.0	toalla húmedo
+4.0	neuropatía diabético
+4.0	lente monocular
+4.0	ets
+4.0	tipo iv
+4.0	apariencia
+4.0	glosario
+4.0	hormigueo
+4.0	trastorno congénito
+4.0	embarazo
+4.0	irritabilidad
+4.0	ácido acetilsalicílico
+4.0	albinismo oculocutáneo
+4.0	rayo solar
+3.94	m
+3.79	d
+3.75	hipoacusia
+3.5	pigmento
+3.5	coloboma
+3.5	migraña
+3.4	trauma
+3.4	cicatriz
+3.33	hipertensión
+3.32	tratamiento temprano del retinopatía diabético
+3.32	signo del degeneración macular húmedo
+3.32	tratamiento del lesión ocular común
+3.32	síntoma común del encefalomiopatía mitocóndrica
+3.32	c síndrome del intestino irritable
+3.32	tratamiento temprano del desprendimiento retinal
+3.32	complicación específico del enfermedad mitocóndricas
+3.32	infección viral del superficie ocular
+3.32	síntoma característico del enrojecimiento ocular
+3.32	síndrome del insuficiencia respiratorio agudo
+3.32	síntoma común del enfermedad mitocóndricas
+3.32	inflamación del ganglio linfático circundante
+3.32	diseminación del vaso sanguíneo anormal
+3.13	of
+3.0	cepillado frecuente del diente
+3.0	extirpación quirúrgico del ojo
+3.0	c síndrome del rett
+3.0	síntoma del miopatía mitocóndrica
+3.0	pulso
+3.0	síndrome del alcoholismo fetal
+3.0	tipo común del lesión
+3.0	enfermedad del itai itai
+3.0	enfermedad del reflujo gastroesofágico
+3.0	enfermedad del válvula cardíaco
+3.0	síndrome del incontinencia pigmentario
+3.0	coloración amarillento del piel
+3.0	biopsia del glándula salival
+3.0	plomo
+3.0	síntoma del síndrome diencefálico
+3.0	signo temprano del cáncer
+3.0	pérdida súbito del visión
+3.0	coumadin
+3.0	glioma del nervio óptico
+3.0	moretón
+3.0	rabdomiólisis
+3.0	síntoma del hipertensión arterial
+3.0	inflamación viral del retina
+3.0	infección del seno nasal
+3.0	apariencia anormal del mitocondria
+3.0	arruga
+3.0	signo inespecífico del irritación
+3.0	infección viral del conjuntiva
+3.0	trastorno del motilidad intestinal
+3.0	síntoma del enfermedad mitocóndrica
+3.0	oclusión del arteria retiniano
+3.0	síntoma del herpes ocular
+3.0	tuberculosis
+3.0	método del cirugía refractivo
+3.0	examen estándar del ojo
+3.0	malestar
+3.0	c alteración del sueño
+3.0	analgésico
+3.0	enfermedad del arteria coronario
+3.0	nervio óptico del ojo
+3.0	haz del rayo x
+3.0	síndrome del dificultad respiratorio
+3.0	deglución
+3.0	desencadenante común del alergia
+3.0	célula nervioso del piel
+3.0	parásito
+3.0	desmayo
+3.0	terapia antagonista del vegf
+3.0	examen del anticuerpo antinuclear
+3.0	contracción del célula muscular
+3.0	oreja
+3.0	síndrome del mesencéfalo dorsal
+3.0	espasmo del músculo facial
+3.0	yodo
+3.0	retinopatía del prematuridad leve
+3.0	síntoma del ojo seco
+3.0	hinchazón del tejido cerebral
+3.0	conjuntivitis del tipo granular
+3.0	tipo del rinitis alérgico
+3.0	diagrama
+3.0	síntoma del queratitis herpético
+3.0	c trastorno del sueño
+3.0	facoemulsificación
+3.0	síntoma del retinopatía diabético
+3.0	síndrome del ovario poliquístico
+3.0	conjuntivitis del tipo alérgico
+3.0	pérdida repentino del visión
+3.0	saco del párpado inferior
+3.0	secreción anormal del ojo
+3.0	fármaco modificador del enfermedad
+3.0	colestasis intrahepática del embarazo
+3.0	partícula microscópico del polen
+3.0	tortuosidad del vaso sanguíneo
+3.0	coágulo
+3.0	acromatopsia
+3.0	blefaroespasmo
+3.0	fisioterapia
+3.0	melanoma maligno del ojo
+3.0	visión cromático
+3.0	infección bacteriano del ojo
+3.0	distrofia corneal del fuchs
+3.0	irritación del membrana mucoso
+3.0	tejido del ganglio linfático
+3.0	protuberancia
+3.0	pérdida del visión cromático
+3.0	cirugía del músculo ocular
+3.0	tipo del tumor ocular
+3.0	disfunción del nervio craneal
+3.0	agrandamiento del vaso sanguíneo
+3.0	enrojecimiento del ojo sensibilidad
+3.0	examen del dilatación ocular
+3.0	progresión del retinopatía diabético
+3.0	escáner
+3.0	tipo del célula inmune
+3.0	inflamación repentino del nervio
+3.0	tonómetro
+3.0	distrofia endotelial del fuchs
+3.0	tumor maligno del ojo
+3.0	debilidad del músculo cardíaco
+3.0	glándula pineal del cerebro
+3.0	suavidad
+3.0	lente del gafas común
+3.0	desencadenante del conjuntivitis alérgico
+3.0	ducha
+3.0	creatina quinasa del suero
+3.0	enfermedad del vaso sanguíneo
+3.0	tipo del gota oftálmico
+3.0	masa
+3.0	variedad del medicamento común
+3.0	sífilis
+3.0	revestimiento del tejido nervioso
+3.0	infección herpético del ojo
+3.0	audífono
+3.0	inflamación del nervio óptico
+3.0	pérdida leve del visión
+3.0	pudlak
+3.0	pecho
+3.0	deficiencia agudo del folato
+3.0	espasmo del vaso sanguíneo
+3.0	diagnóstico temprano del diabetes
+3.0	método del indentación escleral
+3.0	examen rutinario del ojo
+3.0	melanoma maligno del coroides
+3.0	tularemia
+3.0	rasquiña
+3.0	ampo tipo del herpes
+3.0	colgajo del tejido corneal
+3.0	cirugía del músculo extraocular
+3.0	blefaroplastia
+3.0	examen ocular del rutina
+3.0	histamina
+3.0	demencia
+3.0	extirpación quirúrgico del catarata
+3.0	hiperglicemia
+3.0	tipo del ictericia fisiológico
+3.0	protrusión anormal del ojo
+3.0	bethesda
+3.0	signo del retinopatía diabético
+3.0	píldora
+3.0	sedación
+3.0	diagnóstico del rinitis alérgico
+3.0	tabaco
+3.0	inyección del toxina botulínica
+3.0	ungüento oftálmico del atropina
+3.0	aspirador
+3.0	examen del motilidad ocular
+3.0	examen frecuente del ojo
+3.0	examen del líquido cefalorraquídeo
+3.0	pilocarpina
+3.0	trastorno del nervio craneal
+3.0	dentista
+3.0	lagrimeo excesivo del ojo
+3.0	capa delgado del célula
+3.0	espasmo involuntario del músculo
+3.0	líquido del vaso sanguíneo
+3.0	biopsia del ganglio linfático
+3.0	tratamiento del ojo perezoso
+3.0	ndic
+3.0	enfermedad del arteria carótido
+3.0	clic
+3.0	diazepam
+3.0	coloración marrón del ojo
+3.0	creatina
+3.0	electrodo
+3.0	capa grueso del bacitracina
+3.0	tabaquismo
+3.0	opacificación del cápsula posterior
+3.0	medicamento tópico del ojo
+3.0	placebo
+3.0	secreción mucoso del ojo
+3.0	gota dilatador del pupila
+3.0	meningitis
+3.0	espectroscopía del resonancia magnético
+3.0	situ
+3.0	parto
+3.0	endoscopia
+3.0	hifema
+3.0	quemosis
+3.0	ampolla
+3.0	activador del plasminógeno tisular
+3.0	obstrucción del arteria carótido
+3.0	parálisis facial periférico idiopático
+3.0	acumulación del ácido láctico
+3.0	sarcoma del tejido blando
+3.0	gel oftálmico del timolol
+3.0	fármaco inhibidor del factor
+3.0	atropina
+3.0	síndrome del displasia ectodérmico
+3.0	orina
+3.0	tipo del lesión ocular
+2.86	and
+2.75	anomalía
+2.67	mancha
+2.67	prematuridad
+2.67	cirugía refractivo
+2.63	rop
+2.58	dilatación del vaso
+2.58	curación del trastorno
+2.58	lesión del córnea
+2.58	mechón del cabello
+2.58	síndrome del lowe
+2.58	conteo del eosinófilo
+2.58	lesión ocular traumático
+2.58	transplante del pulmón
+2.58	variedad del conjuntivitis
+2.58	fotocoagulación del retina
+2.58	trastorno neurológico agudo
+2.58	complicación del retinopatía
+2.58	síndrome del chediak
+2.58	orificio del ventilación
+2.58	tipo del blefaroespasmo
+2.58	monitor del ultrasonido
+2.58	síntoma del artritis
+2.58	glande del pene
+2.58	tipo del quimioterapia
+2.58	terapia genético convencional
+2.58	signo del glaucoma
+2.58	miligramo del cinc
+2.58	epitelio del córnea
+2.58	champú del bebé
+2.58	complicación del distrofia
+2.58	mitocondria del esperma
+2.58	tipo del coloboma
+2.58	capa del pared
+2.58	cáncer del páncreas
+2.58	disminución del audición
+2.58	apariencia del ojo
+2.58	síndrome del waandenburg
+2.58	capa del coroides
+2.58	pronóstico del cirugía
+2.58	extirpación del célula
+2.58	tipo del inflamación
+2.58	complicación del sueño
+2.58	membrana del nariz
+2.58	antagonista del calcio
+2.58	tejido del cristalino
+2.58	acumulación del presión
+2.58	pérdida del ojo
+2.58	desprendimiento vítreo posterior
+2.58	capa del mucosidad
+2.58	infección del garganta
+2.58	enrojecimiento del esclerótica
+2.58	gota del diagnóstico
+2.58	limpiador del piel
+2.58	partícula del ojo
+2.58	ojo del infección
+2.58	inhibidor del leucotrieno
+2.58	tamaño del cáncer
+2.58	miligramo del zinc
+2.58	sensación del dolor
+2.58	radiografía del cuello
+2.58	tratamiento del úlcera
+2.58	tipo del tumor
+2.58	diagnóstico del alergia
+2.58	ictericia hepatocelular isquémico
+2.58	cuerpo del bebé
+2.58	síntoma del retinoblastoma
+2.58	síntoma del habla
+2.58	miligramo del beta
+2.58	contracción del párpado
+2.58	examen del rutina
+2.58	tinte anaranjado fluorescente
+2.58	dolor del cadera
+2.58	tumor del retina
+2.58	afección del ojo
+2.58	biopsia del piel
+2.58	examen del iris
+2.58	síndrome del apert
+2.58	dolor ocular excesivo
+2.58	inflamación del piel
+2.58	desprendimiento del colgajo
+2.58	abertura del lagrimal
+2.58	disminución del sudoración
+2.58	síntoma del escarlatina
+2.58	anomalía del superficie
+2.58	signo del visión
+2.58	líquido del córnea
+2.58	inflamación del garganta
+2.58	dolor del cefalea
+2.58	capa del pomada
+2.58	signo del daltonismo
+2.58	inflamación del úvea
+2.58	síndrome del guillain
+2.58	tipo del enfermedad
+2.58	consultorio del médico
+2.58	and kidney diseases
+2.58	mutación del mtadn
+2.58	secreción del garganta
+2.58	cirugía del desprendimiento
+2.58	dolor del tobillo
+2.58	electrodo del lente
+2.58	tipo del oftalmoscopia
+2.58	cirujano del ojo
+2.58	hormona del tiroides
+2.58	neuritis óptico autoinmunitario
+2.58	tipo del lio
+2.58	deformidad del párpado
+2.58	tratamiento del alergia
+2.58	fosfato del creatina
+2.58	acetato del glatirámero
+2.58	complicación del diabetes
+2.58	consultorio del oftalmólogo
+2.58	espasmo del párpado
+2.58	terapia del cáncer
+2.58	infección del conjuntiva
+2.58	tipo del retinoblastoma
+2.58	secundario del medicamento
+2.58	hueso del cráneo
+2.58	superficie del piel
+2.58	rinitis alérgico leve
+2.58	medicamento del inhalador
+2.58	irritación ocular leve
+2.58	oftalmotonometría del aplanamiento
+2.58	dolor del talón
+2.58	secador del pelo
+2.58	moco del nariz
+2.58	presión sanguíneo diastólico
+2.58	arteria del retina
+2.58	tipo del azúcar
+2.58	lagrimeo del ojo
+2.58	tratamiento del coroiditis
+2.58	síndrome del condrodisplasia
+2.58	cucharadita del sal
+2.58	síndrome del rett
+2.58	vaso sanguíneo retiniano
+2.58	terapia del reemplazo
+2.58	signo del catarata
+2.58	probabilidad del recurrencia
+2.58	recipiente del sustancia
+2.58	citocromo c oxidasa
+2.58	síntoma del distrofia
+2.58	infección del oído
+2.58	visión del bebé
+2.58	tipo del retinitis
+2.58	tipo del célula
+2.58	método del cuerda
+2.58	combinación del equinacea
+2.58	dolor del glándula
+2.58	comisura del boca
+2.58	tipo del hipermetropía
+2.58	resequedad del ojo
+2.58	hidróxido del potasio
+2.58	contracción del ojo
+2.58	enfermedad del tiroides
+2.58	opacificación del cristalino
+2.58	acumulación del bilis
+2.58	dolor del pene
+2.58	anillo del tejido
+2.58	síntoma del fiebre
+2.58	cáncer del célula
+2.58	aliviadores del dolor
+2.58	neurona del ojo
+2.58	adelgazamiento del piel
+2.58	examen del sensibilidad
+2.58	gota oftálmico antinflamatorias
+2.58	reemplazo del terapia
+2.58	síndrome del kearns
+2.58	combinación del onda
+2.58	inflamación del iris
+2.58	enfermedad del alycia
+2.58	pérdida del sangre
+2.58	biopsia del colon
+2.58	empeoramiento del visión
+2.58	infección contagioso común
+2.58	tendón del aquiles
+2.58	empeoramiento del enfermedad
+2.58	célula del endotelio
+2.58	tipo del radiación
+2.58	anzuelo del piel
+2.58	elasticidad del cristalino
+2.58	tipo del fiebre
+2.58	tipo del daltonismo
+2.58	inflamación del folículo
+2.58	gota del ojo
+2.58	retinopatía del prematuro
+2.58	conteo del leucocito
+2.58	and treatment of
+2.58	síndrome del pearson
+2.58	superficie del esclerótica
+2.58	pronóstico del síndrome
+2.58	motilidad del esperma
+2.58	capa del ojo
+2.58	signo del dme
+2.58	tratamiento del infección
+2.58	disminución del período
+2.58	racimo glioma óptico
+2.58	degeneración del retina
+2.58	areo del ojo
+2.58	cáncer del retina
+2.58	cepillo del diente
+2.58	sensación del cansancio
+2.58	cáncer del ojo
+2.58	preservador del pupila
+2.58	signo del neurofibromatosis
+2.58	adelgazamiento del hueso
+2.58	tipo del alergia
+2.58	sensación del rasguño
+2.58	hinchazón del nervio
+2.58	síndrome del reiter
+2.58	densidad del córnea
+2.58	trauma del ojo
+2.58	signo del alteración
+2.58	célula del retina
+2.58	tipo del retinopexia
+2.58	vaso sanguíneo cerebral
+2.58	combinación del medicamento
+2.58	cirugía del miopía
+2.58	conducto semicircular óseo
+2.58	síndrome del stevens
+2.58	examen ocular minucioso
+2.58	supervivencia del bebé
+2.58	córnea del lesión
+2.58	﻿lesión del ojo
+2.58	enfermedad del coats
+2.58	cerumen del oído
+2.58	vaso sanguíneo permeable
+2.58	engrosamiento del lente
+2.58	tinción del córnea
+2.58	tipo del medicamento
+2.58	sensación del somnolencia
+2.58	sangrado del ojo
+2.58	síntoma del melanoma
+2.58	sensación del picazón
+2.58	síntoma del boca
+2.58	deficiencia del melatonina
+2.58	método del aplanamiento
+2.58	enfermedad ocular específico
+2.58	irrigación del ojo
+2.58	complicación del cirugía
+2.58	presión del fluido
+2.58	folleto del mda
+2.58	receptor del tacto
+2.58	tejido del donante
+2.58	diseminación del infección
+2.58	tratamiento del trastorno
+2.58	inhalación del destapador
+2.58	tipo del uveítis
+2.58	suplementación del melatonina
+2.58	department of health
+2.58	sequedad del piel
+2.58	oscurecimiento del córnea
+2.58	hinchazón del párpado
+2.58	síntoma del uveítis
+2.58	examen del glaucoma
+2.58	partícula del pigmento
+2.58	ablandamiento del hueso
+2.58	tejido graso sobrante
+2.58	signo del cáncer
+2.58	parche del ojo
+2.58	anatomía del cristalino
+2.58	catarata congénito hereditario
+2.58	tratamiento del apoplejía
+2.58	perforación del córnea
+2.58	tamaño del ojo
+2.58	c sedación preoperatorio
+2.58	adelgazamiento del córnea
+2.58	arritmia del corazón
+2.58	tipo del bacteria
+2.58	método del autosellado
+2.58	tipo del alteración
+2.58	resecamiento del ojo
+2.58	apariencia del piel
+2.58	lesión del riñón
+2.58	glioma del ojo
+2.58	conteo del plaqueta
+2.58	incidencia del alergia
+2.58	tipo del signo
+2.58	hígado del bebé
+2.58	alivio del síntoma
+2.58	secreción del líquido
+2.58	microscopía del electrón
+2.58	tratamiento del retinoblastoma
+2.58	disfunción del páncreas
+2.58	probabilidad del curación
+2.58	gafas del policarbonato
+2.58	célula del óvulo
+2.58	mancha del sangre
+2.58	lesión del piel
+2.58	síntoma del irritación
+2.58	tipo del retinopatía
+2.58	cirugía del descompresión
+2.58	vaso sanguíneo defectuoso
+2.58	defecto del iris
+2.58	gota oftálmico profiláctico
+2.58	examen del músculo
+2.58	azúcar del sangre
+2.58	revestimiento del corazón
+2.58	nervio óptico saludable
+2.58	ojo del lesión
+2.58	exámen del ojo
+2.58	pus del ojo
+2.58	tejido del cuerpo
+2.58	pérdida del pigmentación
+2.58	mutación del nadn
+2.58	tipo del dolor
+2.58	apariencia del sangre
+2.58	tratamiento del cáncer
+2.58	tratamiento del escarlatina
+2.58	prescripción del lente
+2.58	pérdida del diente
+2.58	acumulación del toxina
+2.58	síntoma del desprendimiento
+2.58	biopsia del hígado
+2.58	apariencia del enrojecimiento
+2.58	examen del ecografía
+2.58	delineador del ojo
+2.58	of diabetes educators
+2.58	examen del lámpara
+2.58	desencadenante del alergia
+2.58	agudeza del visión
+2.58	irritación del piel
+2.58	examen del lagrimeo
+2.58	lesión del nervio
+2.58	enfermedad del kawasaki
+2.58	insuficiencia cardiaco congestivo
+2.58	suplemento del melatonina
+2.58	oclusión arterial retiniano
+2.58	tipo del amoratamiento
+2.58	pérdida del proteína
+2.58	sueño del paciente
+2.58	removedor del mancha
+2.58	síntoma del infección
+2.58	gel del timolol
+2.58	irritación del úvea
+2.58	sensación del pinchazo
+2.58	gota del antihistamina
+2.58	grosor del córnea
+2.58	opacamiento del cristalino
+2.58	c trastorno convulsivo
+2.58	cicatrización del nervio
+2.58	síndrome del behcet
+2.58	examen del tímpano
+2.58	signo del estrabismo
+2.58	período del remisión
+2.58	examen del cuerpo
+2.58	envase del pastilla
+2.58	rm del cerebro
+2.58	ultrasonido del ojo
+2.58	antagonista del prostanoides
+2.58	tapón del cerumen
+2.58	depresión agudo subyacente
+2.58	frasco del timolol
+2.58	musculatura del ojo
+2.58	gota oftálmico antimicótico
+2.58	tipo del ecografía
+2.58	busqueda del tratamiento
+2.58	anomalía del músculo
+2.58	inflamación del vaina
+2.58	síntoma del síndrome
+2.58	oclusión del arteria
+2.58	trastorno hereditario benigno
+2.58	tipo del infección
+2.58	retinopatía del prematurez
+2.58	variedad del trastorno
+2.58	colirio antibiótico suave
+2.58	dosificación del areds
+2.58	sensibilidad del ojo
+2.58	removedor del revestimiento
+2.58	trastorno ocular común
+2.58	ojo del paciente
+2.58	cloruro del benzalkonio
+2.58	acumulación del líquido
+2.58	cáncer del piel
+2.58	abertura del ojo
+2.58	enfermedad vascular cerebral
+2.58	anomalía del visión
+2.58	aerosol corticoesteroides nasal
+2.5	intestino
+2.5	gel
+2.5	obstrucción
+2.0	músculo esquelético
+2.0	cicatrización crónico
+2.0	pigmentación marrón
+2.0	encefalomiopatías
+2.0	dolor leve
+2.0	célula saludable
+2.0	nutrition professional
+2.0	corticoesteroides tópico
+2.0	cicatrización corneal
+2.0	specialist
+2.0	fumador
+2.0	colitis ulcerativo
+2.0	tracto digestivo
+2.0	síndrome inflamatorio
+2.0	dra
+2.0	sangrado incontrolable
+2.0	contributors to
+2.0	retinopatía hipertensivo
+2.0	seudotumor
+2.0	incomodidad
+2.0	insuficiencia aórtico
+2.0	cefalea histamínico
+2.0	visión anormal
+2.0	enfermedad desmielinizante
+2.0	músculo ciliar
+2.0	ungüento lagrimal
+2.0	terapia antiangiogénesis
+2.0	atropina oftálmico
+2.0	kernicterus
+2.0	and health
+2.0	defecto congénito
+2.0	factor reumatoideo
+2.0	pomada antibiótico
+2.0	sensación leve
+2.0	deficiencia auditivo
+2.0	cardiopatía
+2.0	síntoma temprano
+2.0	nistagmo leve
+2.0	epilepsia mioclónica
+2.0	ganglio linfático
+2.0	c apoplejía
+2.0	labio leporino
+2.0	tratamiento láser
+2.0	arteria carótido
+2.0	mattie stepaneck
+2.0	clearinghouse
+2.0	examen clínico
+2.0	deficiencia específico
+2.0	tacto fino
+2.0	martillo
+2.0	desgarro
+2.0	metástasis
+2.0	sarampión posinfeccioso
+2.0	yag láser
+2.0	dolor torácico
+2.0	doxiciclina oral
+2.0	for occupational
+2.0	obstrucción intestinal
+2.0	presión dañino
+2.0	desorientación
+2.0	corazón cardiomiopatía
+2.0	mutación genético
+2.0	tipo tensional
+2.0	tejido cicatrizal
+2.0	cirugía corneal
+2.0	trastorno metabólico
+2.0	perforación corneal
+2.0	neuralgia migrañosa
+2.0	trastorno psiquiátrico
+2.0	hiperemia conjuntival
+2.0	queratoconjuntivitis herpético
+2.0	infección subyacente
+2.0	malformación vascular
+2.0	tumor pineal
+2.0	sensación pulsátil
+2.0	engrosamiento
+2.0	coloración grisáceo
+2.0	relajante muscular
+2.0	sibilancias
+2.0	disfunción eréctil
+2.0	suero sanguíneo
+2.0	radiación ultravioleta
+2.0	diarrea
+2.0	chlamydia trachomatis
+2.0	láser ultravioleta
+2.0	pigmentación sal
+2.0	infección urinario
+2.0	atresia biliar
+2.0	implante cristaliniano
+2.0	angiografía fluoresceínica
+2.0	cirugía dental
+2.0	hiperacusia
+2.0	secreción excesivo
+2.0	sinusitis
+2.0	coriorretinitis
+2.0	absceso
+2.0	ojo protruyentes
+2.0	cefalea tensional
+2.0	osteoporosis posmenopáusico
+2.0	aines
+2.0	meningitis bacteriano
+2.0	reposo
+2.0	malestar estomacal
+2.0	temblor muscular
+2.0	eritromicina
+2.0	mutación hereditario
+2.0	uveítis agudo
+2.0	tratamiento específico
+2.0	am lavina
+2.0	oftalmología pediátrico
+2.0	timolol oftálmico
+2.0	contraceptivos oral
+2.0	sensación abrasivo
+2.0	atenolol
+2.0	artritis reumatoide
+2.0	cirugía extracapsular
+2.0	lente estándar
+2.0	valium
+2.0	herpes labial
+2.0	glaucoma crónico
+2.0	secreción purulento
+2.0	trombosis sinusal
+2.0	piel pálido
+2.0	decoloración leve
+2.0	sensación gustativo
+2.0	fatiga ocular
+2.0	inmunoglobulina intravenoso
+2.0	enfermedad retiniano
+2.0	lorazepam
+2.0	assistant professor
+2.0	benzodiazepinas
+2.0	pred liquifilm
+2.0	ácido
+2.0	labio
+2.0	melas
+2.0	antidepresivo
+2.0	afección subyacente
+2.0	enfermedad aterosclerótica
+2.0	trastorno articular
+2.0	anticuerpo
+2.0	medicamento intravenoso
+2.0	malestar leve
+2.0	abertura
+2.0	delirio posterior
+2.0	ungüento antibacteriano
+2.0	dieta saludable
+2.0	pulgada
+2.0	inyección esclerótico
+2.0	membrana mucosa
+2.0	telilla delgado
+2.0	mitocondria mutante
+2.0	acanthamoeba
+2.0	epilepsia
+2.0	dolor súbito
+2.0	boca seco
+2.0	degeneración retiniano
+2.0	catarata inmaduro
+2.0	diálisis renal
+2.0	irritación común
+2.0	related macular
+2.0	pilocarpina oftálmico
+2.0	neuropatía facial
+2.0	afección específico
+2.0	taza
+2.0	dme húmedo
+2.0	lente microscópico
+2.0	fasciculaciones
+2.0	corticosteroide tópico
+2.0	fósforo muscular
+2.0	célula nervioso
+2.0	trastorno circulatorio
+2.0	retinopatía pigmentario
+2.0	paracetamol
+2.0	lesión específico
+2.0	conducto uveal
+2.0	mitocondria sano
+2.0	toxocara canis
+2.0	medicamento antisicóticos
+2.0	drop
+2.0	célula fotorreceptor
+2.0	enseña leve
+2.0	nervio oculomotor
+2.0	glioma hipotalámico
+2.0	monitor cardíaco
+2.0	vejiga
+2.0	visión fino
+2.0	fosfato decreatina
+2.0	deshidratación
+2.0	tacto suave
+2.0	cáncer pulmonar
+2.0	descamación
+2.0	eficacia clínico
+2.0	disease and
+2.0	ardor ocular
+2.0	cromoglicato disódico
+2.0	spanish
+2.0	diabetes and
+2.0	tratamiento excesivo
+2.0	cuero cabelludo
+2.0	bacteria streptococcus
+2.0	prótesis dental
+2.0	examen común
+2.0	herpes simplex
+2.0	frote
+2.0	deficiencia renal
+2.0	eeuu
+2.0	músculo fibroso
+2.0	citomegalovirus
+2.0	compresa
+2.0	complicación frecuente
+2.0	infección pulmonar
+2.0	sensación punzante
+2.0	medicamento oral
+2.0	mri
+2.0	sensación anormal
+2.0	parálisis oculomotora
+2.0	astigmatismo raro
+2.0	ojo párpado
+2.0	electrodo diminuto
+2.0	lesión genital
+2.0	cefalea migrañosa
+2.0	infección gastrointestinal
+2.0	retinopatía exudativo
+2.0	polen diminuto
+2.0	inyección conjuntival
+2.0	aplique presión
+2.0	síntoma cerebral
+2.0	enzima
+2.0	eccema atópico
+2.0	uña dolorido
+2.0	inflamación articular
+2.0	tenesmo vesical
+2.0	disminución repentino
+2.0	arterioesclerosis
+2.0	ruido anormal
+2.0	amoníaco acuoso
+2.0	nublado repentino
+2.0	fibrilación auricular
+2.0	medicamento tópico
+2.0	vendaje
+2.0	bebé sano
+2.0	cuerpo vítreo
+2.0	abrasión diminuto
+2.0	fotocoagulación
+2.0	tejido delgado
+2.0	sensibilidad gustativo
+2.0	medicamento corticosteroide
+2.0	linterna
+2.0	parto prematuro
+2.0	ocusert
+2.0	cirugía cerebral
+2.0	albinism and
+2.0	melatotina intranasal
+2.0	arteritis craneal
+2.0	síntoma neurológico
+2.0	tipo herpes
+2.0	riñón síndrome
+2.0	iridotomía
+2.0	bloqueador
+2.0	cistitis intersticial
+2.0	higiene
+2.0	ceguera funcional
+2.0	afección inusual
+2.0	síndrome genético
+2.0	vitamina antioxidante
+2.0	hipoacusia leve
+2.0	abrasión corneana
+2.0	trastorno neurodegenerativo
+2.0	queratotomía fotorrefractiva
+2.0	gafas común
+2.0	colirio antibiótico
+2.0	atropine
+2.0	visión defectuoso
+2.0	parálisis cerebral
+2.0	arteriopatía coronario
+2.0	infección sinusales
+2.0	ansi
+2.0	bms
+2.0	enfermedad tiroideo
+2.0	medicamento beta
+2.0	pestañeo
+2.0	angiografía fluorescente
+2.0	tenormin
+2.0	antibiótico oral
+2.0	antibiótico tópico
+2.0	sulfacetamida
+2.0	herpes genital
+2.0	tapón diminuto
+2.0	síntoma visual
+2.0	hipoacusia conductivo
+2.0	malaria
+2.0	cordón elástico
+2.0	láser excímero
+2.0	ecografía bidimensional
+2.0	ácido suave
+2.0	célula inmunitario
+2.0	mutación común
+2.0	trasplante corneal
+2.0	lente suave
+2.0	ojo ictérico
+2.0	aceite
+2.0	pong
+2.0	csa
+2.0	espasmo repetitivo
+2.0	pulgar
+2.0	trauma ocular
+2.0	alucinación
+2.0	capa mucoso
+2.0	síntoma muscular
+2.0	hzo
+2.0	apariencia sanguinolento
+2.0	cirujano oftalmológico
+2.0	presión leve
+2.0	corteza visual
+2.0	edema corneal
+2.0	diabetes incontrolado
+2.0	alergia nasal
+2.0	trastorno nervioso
+2.0	antimonio
+2.0	ciclosporina líquido
+2.0	dolor facial
+2.0	propranolol
+2.0	receptor nervioso
+2.0	level monograph
+2.0	apariencia inusual
+2.0	anormalidad neuroendocrinas
+2.0	estómago líquido
+2.0	mms
+2.0	glándula lacrimal
+2.0	alteración visual
+2.0	exámen
+2.0	trastorno neuro
+2.0	médula óseo
+2.0	encanecimiento prematuro
+2.0	glándula ceroso
+2.0	torrente sanguíneo
+2.0	latencia rem
+2.0	estiramiento facial
+2.0	glándula meibomianas
+2.0	oftalmia neonatal
+2.0	interferón
+2.0	lente prismático
+2.0	tendón
+2.0	onda ultrasónico
+2.0	dieta líquido
+2.0	hemangioma
+2.0	deficiencia cromático
+2.0	presión excesivo
+2.0	farmaceuta
+2.0	estrabismo paralítico
+2.0	saco lagrimal
+2.0	suplemento nutricional
+2.0	ingrediente variable
+2.0	adn mitocondrico
+2.0	celulitis periorbitaria
+2.0	párpado raro
+2.0	encefalomiopatías mitocóndricas
+2.0	melanoma ocular
+2.0	of ocular
+2.0	c trombocitopenia
+2.0	síntoma frecuente
+2.0	travoprost oftálmico
+2.0	impétigo
+2.0	vitamina d
+2.0	of ophthalmology
+2.0	tuberculosis micobacteriana
+2.0	abultamiento indoloro
+2.0	cuerda
+2.0	presión sinusal
+2.0	reflujo ácido
+2.0	examen retinal
+2.0	hidromasaje
+2.0	molécula
+2.0	rojez
+2.0	síntoma articular
+2.0	síntoma vesical
+2.0	eyesmart
+2.0	ecografía abdominal
+2.0	nublado súbito
+2.0	cortadura leve
+2.0	costra
+2.0	esteroide oral
+2.0	secreción acuoso
+2.0	parálisis ocular
+2.0	gen rb
+2.0	gafas anti
+2.0	abertura orbitario
+2.0	lesión traumático
+2.0	dificultad visual
+2.0	neumonía
+2.0	tomografía axial
+2.0	quest
+2.0	audiometría
+2.0	hiperactividad
+2.0	leucemia
+2.0	piel amarillento
+2.0	mngie
+2.0	cirugía ambulatorio
+2.0	delirio postoperatorio
+2.0	enfermedad drepanocítico
+2.0	defecto mitocóndricos
+2.0	gotero
+2.0	nervio periférico
+2.0	c glaucoma
+2.0	célula corneal
+2.0	tejido saludable
+2.0	galactosemia
+2.0	infección sistémico
+2.0	queratitis bacteriano
+2.0	queratitis
+2.0	úlcera corneana
+2.0	uu
+2.0	aspirin
+2.0	jaqueca
+2.0	prednisona oral
+2.0	moco blancuzco
+2.0	luzindol
+2.0	cáncer ocular
+2.0	rigidez articular
+2.0	apariencia flácido
+2.0	atrofia óptico
+2.0	codo
+2.0	hemorragia retiniano
+2.0	botiquín
+2.0	lubricante
+2.0	cortisona
+2.0	sensación arenoso
+2.0	lopressor
+2.0	aplique
+2.0	sodium sulamyd
+2.0	salivación
+2.0	inflamación ocular
+2.0	conjuntivitis papilar
+2.0	artritis posinfeccioso
+2.0	irrigación
+2.0	metoprolol
+2.0	fotocoagulación panretiniana
+2.0	picor
+2.0	enfermedad hepático
+2.0	trastorno ocular
+2.0	hipoacusia sensorioneural
+2.0	conjuntiva bulbar
+2.0	antioxidante
+2.0	psoriasis
+2.0	sustancia nutriente
+2.0	síntoma genital
+2.0	período
+2.0	porción
+2.0	ansiolisis
+2.0	medicamento anticoagulante
+2.0	feto
+2.0	ulceración corneal
+2.0	secreción uretral
+2.0	prótesis intraocular
+2.0	prednisolona oftálmico
+2.0	quiasma óptico
+2.0	amígdala
+2.0	reperfusión posterior
+2.0	colitis ulceroso
+2.0	rinorrea
+2.0	síndrome cardiaco
+2.0	secreción líquido
+2.0	medicamento colinérgico
+2.0	etilenglicol
+2.0	visión agudo
+2.0	ambrosía
+2.0	aminoácido triptofán
+2.0	boca reseco
+2.0	lesión congénito
+2.0	afección contagioso
+2.0	retinosquisis congénito
+2.0	capa subyacente
+2.0	espasmo crónico
+2.0	método imagenológico
+2.0	rayo delgado
+2.0	resección
+2.0	edited and
+2.0	irritante bacteriano
+2.0	catarata hipermaduro
+2.0	encefalitis viral
+2.0	gota antinflamatorias
+2.0	food and
+2.0	enfermedad pulmonar
+2.0	anafilaxia
+2.0	almohada
+2.0	tipo específico
+2.0	glándula tiroides
+2.0	neuropatía periférico
+2.0	mtadn mutante
+2.0	celulitis orbitario
+2.0	oído frecuente
+2.0	rigidez cervical
+2.0	for
+2.0	pasatiempo
+2.0	enfermedad intestinal
+2.0	trastorno vascular
+2.0	básquetbol
+2.0	gota antihistamínico
+2.0	analgésico suave
+2.0	angiografía cerebral
+2.0	ictericia leve
+2.0	c insomnio
+2.0	presión abdominal
+2.0	dolor agudo
+2.0	sustancia alcalino
+2.0	gota grueso
+2.0	estrabismo congénito
+2.0	tejido muscular
+2.0	angioedema
+2.0	sangrado leve
+2.0	contracción punzante
+2.0	tinte amarillento
+2.0	patología pulmonar
+2.0	queratitis seco
+2.0	vesícula biliar
+2.0	paquimetría
+2.0	terapia ocupacional
+2.0	retardo mental
+2.0	oftalmólogo pediátrico
+2.0	migraña común
+2.0	síntoma inusual
+2.0	hemorragia vítreo
+2.0	dme seco
+2.0	tratamiento anti
+2.0	superficie cutáneo
+2.0	pilopine hs
+2.0	http
+2.0	microorganismo
+2.0	neisseria gonorrhoea
+2.0	fotocoagulación focal
+2.0	complicación ocular
+2.0	factor genético
+2.0	bacteria chlamydia
+2.0	sulfacetamida oftálmico
+2.0	deficiencia visual
+2.0	alycia
+2.0	glaucoma neovascular
+2.0	piel flácido
+2.0	catarata traumático
+2.0	inflamación cerebral
+2.0	sutura ajustable
+2.0	grasa corporal
+2.0	neurofibromatosis tipo
+2.0	hiperrespuesta bronquial
+2.0	síntoma urinario
+2.0	antinflamatorios
+2.0	tejido circundante
+2.0	alicate
+2.0	lesión retinal
+2.0	c depresión
+2.0	receptor
+2.0	conjuntivitis granular
+2.0	estenosis biliar
+2.0	dacriostenosis
+2.0	fatiga muscular
+2.0	sensibilidad anormal
+2.0	antígeno hla
+2.0	síntoma tratable
+2.0	ampolla febril
+2.0	indentación escleral
+2.0	respiración
+2.0	necrosis tumoral
+2.0	oftalmía neonatal
+2.0	pio
+2.0	apariencia facial
+2.0	visión enfermedad
+2.0	ácido clorhídrico
+2.0	inmunoterapia
+2.0	ingrediente
+2.0	tipo ictericia
+1.85	c
+1.8	superficie
+1.8	glándula
+1.67	ultrasonido
+1.57	biopsia
+1.27	em
+1.18	iv
+1.0	tinitus
+1.0	neurofibromatosis
+1.0	neoplasia
+1.0	maculopatía
+1.0	artritis
+1.0	micoplasma
+1.0	palidez
+1.0	sucinilcolina
+1.0	esclerodermia
+1.0	verdura
+1.0	quinidina
+1.0	xeroftalmia
+1.0	armd
+1.0	idoxiuridina
+1.0	md
+1.0	cataract
+1.0	rabdomiosarcoma
+1.0	fax
+1.0	azatioprina
+1.0	dálmata
+1.0	copaxone
+1.0	agarwal
+1.0	manju
+1.0	serotonina
+1.0	pulidora
+1.0	isopto
+1.0	cosopt
+1.0	resfrío
+1.0	amoníaco
+1.0	cetirizina
+1.0	mds
+1.0	lazada
+1.0	somatostatín
+1.0	intravítreo
+1.0	arritmia
+1.0	vagina
+1.0	antebrazo
+1.0	esmolol
+1.0	raspadura
+1.0	ecoencefalograma
+1.0	ecocardiografía
+1.0	fóvea
+1.0	econopred
+1.0	rutina
+1.0	grifo
+1.0	basketball
+1.0	paperas
+1.0	drtango
+1.0	gripe
+1.0	metil
+1.0	sotalol
+1.0	isquemia
+1.0	inapetencia
+1.0	tysabri
+1.0	gruesa
+1.0	altitud
+1.0	naproxeno
+1.0	fijación
+1.0	sien
+1.0	bismuto
+1.0	emg
+1.0	urobilinógeno
+1.0	acostada
+1.0	hipopigmentación
+1.0	neurooftalmólogo
+1.0	contractura
+1.0	fnt
+1.0	cox
+1.0	argirosis
+1.0	hemopatía
+1.0	succionarlo
+1.0	utensilio
+1.0	tabs
+1.0	clamidiosis
+1.0	amitriptilina
+1.0	llaga
+1.0	desfiguramiento
+1.0	avastin
+1.0	scarlet
+1.0	donante
+1.0	programs
+1.0	preste
+1.0	ciclopentolato
+1.0	condimento
+1.0	triglicérido
+1.0	versed
+1.0	lucentis
+1.0	deshumidificador
+1.0	oculomotor
+1.0	gentamicina
+1.0	recaída
+1.0	lcr
+1.0	resfriado
+1.0	hipófisis
+1.0	histoquímica
+1.0	eosinófilo
+1.0	nearsightedness
+1.0	dental
+1.0	inderal
+1.0	betapace
+1.0	atomizador
+1.0	blanqueador
+1.0	esquistosomiasis
+1.0	citimegalovirus
+1.0	sufra
+1.0	punzaciones
+1.0	ensaye
+1.0	raspado
+1.0	dominante
+1.0	trisomía
+1.0	hipotálamo
+1.0	irmn
+1.0	barbilla
+1.0	belladona
+1.0	odontólogo
+1.0	irritante
+1.0	mils
+1.0	amicacina
+1.0	trifluridina
+1.0	ophthalmologist
+1.0	toprol
+1.0	sordo
+1.0	heparina
+1.0	normodyne
+1.0	acetiltriptamina
+1.0	ekg
+1.0	textura
+1.0	pancreatitis
+1.0	botulismo
+1.0	optómetra
+1.0	histiocitosis
+1.0	toxoplasmosis
+1.0	sintomatología
+1.0	ingesta
+1.0	destapador
+1.0	tumoración
+1.0	colador
+1.0	genitales
+1.0	cytoxan
+1.0	fps
+1.0	labetalol
+1.0	hipotiroidismo
+1.0	fútbol
+1.0	melanina
+1.0	biomicroscopio
+1.0	queratometría
+1.0	humidificador
+1.0	logopedia
+1.0	teofilina
+1.0	midazolam
+1.0	subexposición
+1.0	diente
+1.0	clarase
+1.0	criosonda
+1.0	rápido
+1.0	cargardores
+1.0	org
+1.0	excitabilidad
+1.0	desencadenante
+1.0	info
+1.0	flecha
+1.0	estadounidense
+1.0	breviblic
+1.0	fexofenadina
+1.0	maleato
+1.0	transfusión
+1.0	preservativo
+1.0	gingivitis
+1.0	tylenol
+1.0	apendicitis
+1.0	tetraciclina
+1.0	presbiacusia
+1.0	zanaflex
+1.0	tizanidina
+1.0	spanish-default
+1.0	marisco
+1.0	caroteno
+1.0	crioplexia
+1.0	autosomales
+1.0	tinnitus
+1.0	mucosa
+1.0	igiv
+1.0	mupirocina
+1.0	bizquera
+1.0	optometrist
+1.0	cortisol
+1.0	chalazión
+1.0	taquicardia
+1.0	equimosis
+1.0	vinilo
+1.0	cachexia
+1.0	transpiración
+1.0	disforia
+1.0	electroretinografía
+1.0	hidralazina
+1.0	bevacizumab
+1.0	exoftalmos
+1.0	páncreas
+1.0	iridociclitis
+1.0	htm
+1.0	leucoma
+1.0	frasco
+1.0	lumbago
+1.0	relajación
+1.0	coroiditis
+1.0	ciproheptadina
+1.0	trachomatis
+1.0	inmunodepresión
+1.0	catarro
+1.0	lactoferrina
+1.0	caloría
+1.0	corgard
+1.0	palpación
+1.0	nutriente
+1.0	digestión
+1.0	enjuague
+1.0	provided
+1.0	quemazón
+1.0	ingestión
+1.0	dmard
+1.0	mandíbula
+1.0	regulations
+1.0	lapicero
+1.0	your
+1.0	zolpidem
+1.0	veruronio
+1.0	mioclono
+1.0	nadolol
+1.0	vhs
+1.0	mitoxantrona
+1.0	videos
+1.0	avonex
+1.0	cesárea
+1.0	contracción
+1.0	arginina
+1.0	protrusión
+1.0	zyrtec
+1.0	penfigoideo
+1.0	pantorrilla
+1.0	betacaroteno
+1.0	osteoporosis
+1.0	radiador
+1.0	succión
+1.0	pigmentación
+1.0	lactante
+1.0	decoloración
+1.0	carteolol
+1.0	salmonella
+1.0	varicela
+1.0	progesterona
+1.0	gonioscopia
+1.0	proptosis
+1.0	eccema
+1.0	polimiositis
+1.0	cartílago
+1.0	conjunctivitis
+1.0	endotelio
+1.0	atarantamiento
+1.0	ácaro
+1.0	astm
+1.0	pus
+1.0	palillo
+1.0	hipotermia
+1.0	esotropía
+1.0	autoinmunidad
+1.0	garrapata
+1.0	allegra
+1.0	ciclofosfamida
+1.0	parkinsonismo
+1.0	montacamas
+1.0	csc
+1.0	bradicardia
+1.0	vidarabina
+1.0	gasa
+1.0	clínicasafiliadas
+1.0	yersinia
+1.0	fibromialgia
+1.0	sonograma
+1.0	fotoreceptor
+1.0	angiofluoresceinografía
+1.0	prk
+1.0	exotropía
+1.0	epífora
+1.0	quinidex
+1.0	desvanecimiento
+1.0	hipoglicemia
+1.0	oncocercosis
+1.0	neurodegeneración
+1.0	monovisión
+1.0	metoxitriptamina
+1.0	medicación
+1.0	testículo
+1.0	jacuzzis
+1.0	compresión
+1.0	natalizumab
+1.0	inhalación
+1.0	electromiografía
+1.0	hipoclorito
+1.0	vellosidad
+1.0	condón
+1.0	afroamericano
+1.0	flojedad
+1.0	agrandamiento
+1.0	hemograma
+1.0	eeg
+1.0	neurohormona
+1.0	iep
+1.0	ansiedad
+1.0	codeína
+1.0	parvulario
+1.0	enucleación
+1.0	coenzima
+1.0	lejía
+1.0	sobrepeso
+1.0	laberintitis
+1.0	metanol
+1.0	temblor
+1.0	arenilla
+1.0	medlineplus
+1.0	oftalmalgia
+1.0	germen
+1.0	nefropatía
+1.0	contracepción
+1.0	agarre
+1.0	mlt
+1.0	ronquera
+1.0	argiria
+1.0	perforación
+1.0	anfetamina
+1.0	oxitocina
+1.0	consultorio
+1.0	amd
+1.0	disolvente
+1.0	lacrosse
+1.0	rebif
+1.0	marcapasos
+1.0	detección
+1.0	reviewed
+1.0	fisiología
+1.0	dorzolamida
+1.0	amantadina
+1.0	rotura
+1.0	apnea
+1.0	tramado
+1.0	myein
+1.0	niosh
+1.0	etambutol
+1.0	crioterapia
+1.0	menstruación
+1.0	electroencefalograma
+1.0	adsorbocarpine
+1.0	farsightedness
+1.0	termómetro
+1.0	cintura
+1.0	imán
+1.0	cardiólogo
+1.0	refractor
+1.0	hiperlipidemia
+1.0	carpine
+1.0	cartrol
+1.0	tímpano
+1.0	prominencia
+1.0	carotenemia
+1.0	oncólogo
+1.0	metabolismo
+1.0	epiléptico
+1.0	baclofen
+1.0	metaboliza
+1.0	desfiguración
+1.0	cloromelatonina
+1.0	xerostomía
+1.0	electrocardiograma
+1.0	find
+1.0	anisocoria
+1.0	sincinesia
+1.0	iois
+1.0	tropicamida
+1.0	microqueratomo
+1.0	mastocito
+1.0	fenobarbital
+1.0	rigidez
+1.0	sonambulismo
+1.0	apt
+1.0	maduración
+1.0	deposición
+1.0	vello
+1.0	lioresal
+1.0	varilla
+1.0	látex
+1.0	belcho
+1.0	brimonidina
+1.0	narp
+1.0	intercomunicador
+1.0	capsulotomía
+1.0	aspirina
+1.0	escarificación
+1.0	dilantin
+1.0	predisposición
+1.0	lavatorio
+1.0	nostros
+1.0	escalofrío
+1.0	ranibizumab
+1.0	epiescleritis
+1.0	campylobacter
+1.0	atropisol
+1.0	queratótomo
+1.0	plaquenil
+1.0	novantrone
+1.0	ç
+1.0	prolactina
+1.0	jarabe
+1.0	dicloroacetato
+1.0	akarpine
+1.0	mioglobinuria
+1.0	trandate
+1.0	hábito
+1.0	martilleo
+1.0	maxilar
+1.0	restasis
+1.0	cuán
+1.0	verimed
+1.0	hipercarotenemia
+1.0	clip
+1.0	blocadren
+1.0	www.fda.gov
+1.0	latonoprost
+1.0	arañazo
+1.0	leucocoria
+1.0	sayre
+1.0	babeo
+1.0	histoplasmosis
+1.0	vasopresina
+1.0	collaboration
+1.0	neovascularización
+1.0	faco
+1.0	menopausia
+1.0	snapshot
+1.0	autismo
+1.0	mioglobina
+1.0	hiperpigmentación
+1.0	naprosyn
+1.0	kss
+1.0	irm
+1.0	shp
+1.0	pasamanos
+1.0	metoxi
+1.0	introflexión
+1.0	bloqueado
+1.0	laseveridad
+1.0	mucopolisacaridosis
+1.0	astelin
+1.0	escopolamina
+1.0	metotrexato
+1.0	sobreexposición
+1.0	betimol
+1.0	indometacina
+1.0	electrooculografía
+1.0	metoxindol
+1.0	hipersensibilidad
+1.0	higashi
+1.0	comezón
+1.0	calmante
+1.0	extremidad
+1.0	pdf
+1.0	albornoz
+1.0	axila
+1.0	cirrosis
+1.0	queratocono
+1.0	onda
+1.0	dmae
+1.0	incontinencia
+1.0	fundente
+1.0	ortosis
+1.0	estradiol
+1.0	acetamida
+1.0	rodea
+1.0	borrosidad
+1.0	sauzgatillo
+1.0	polarografía
+1.0	vasculitis
+1.0	dme
+1.0	sindromes
+1.0	dms
+1.0	fenilefrina
+1.0	aspereza
+1.0	trombopoyesis
+1.0	electroencefalografía
+1.0	necrosis
+1.0	fosfocreatina
+0.87	s
+0.8	sequedad
+0.76	retinopatía
+0.75	conteo
+0.67	diseminación
+0.67	esperma
+0.6	ganglio
+0.5	vacuna
+0.5	policarbonato
+0.5	radiografía
+0.5	trasplante
+0.5	abultamiento
+0.4	glioma
+0.0	f
+0.0	antígeno
+0.0	hormona
+0.0	terapia genético
+0.0	óvulo
+0.0	plaqueta
+0.0	areds
+0.0	tapón
+0.0	chlamydia
+0.0	postoperatorio
+0.0	colitis
+0.0	champú
+0.0	motilidad
+0.0	glándula pineal
+0.0	uretra
+0.0	aplanamiento
+0.0	tratamiento del ojo
+0.0	elasticidad
+0.0	vesícula
+0.0	fosfato
+0.0	líquido cefalorraquídeo
+0.0	tumor maligno
+0.0	sarampión
+0.0	herpes zóster
+0.0	suplementación
+0.0	diálisis
+0.0	doxiciclina
+0.0	tipo del ictericia
+0.0	recipiente
+0.0	tejido nervioso
+0.0	irritación ocular
+0.0	coroide
+0.0	ruido
+0.0	anticoagulante
+0.0	marrón
+0.0	recurrencia
+0.0	tumor ocular
+0.0	tratamiento del enfermedad
+0.0	ácido láctico
+0.0	hinchazón del tejido
+0.0	diagnóstico temprano
+0.0	conducto lagrimal
+0.0	pinchazo
+0.0	ph
+0.0	low
+0.0	ciclosporina
+0.0	síntoma del miopatía
+0.0	mild
+0.0	inmunoglobulina
+0.0	colestasis
+0.0	inflamación del ganglio
+0.0	trastorno hereditario
+0.0	intranasal
+0.0	visión periférico
+0.0	disfunción del nervio
+0.0	trastorno neurológico
+0.0	epitelio
+0.0	glándula salival
+0.0	limpiador
+0.0	síndrome del intestino irritable
+0.0	ambulatorio
+0.0	remisión
+0.0	moco
+0.0	encefalitis
+0.0	anillo
+0.0	queratomileusis
+0.0	pérdida súbito
+0.0	uvea
+0.0	aneurisma
+0.0	progresión del retinopatía
+0.0	síntoma del retinopatía
+0.0	encéfalo
+0.0	saco
+0.0	cerumen
+0.0	prednisona
+0.0	rayo x
+0.0	digestivo
+0.0	cuero
+0.0	examen del dilatación
+0.0	neurona
+0.0	aqui
+0.0	liquifilm
+0.0	nadn
+0.0	cinc
+0.0	mucosidad
+0.0	coloración amarillento
+0.0	curación
+0.0	ulceración
+0.0	ventilación
+0.0	waardenburg
+0.0	uña
+0.0	antiviral
+0.0	opacificación

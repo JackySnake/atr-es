@@ -11,6 +11,7 @@ import binom
 
 def load_tagged_sents():
     """docstring for load_tagged_sents"""
+    #with open('input/new_domain.txt', 'r') as corpf:  # new domain corpus
     with open('input/small_domain.txt', 'r') as corpf:  # small corpus
     #with open('input/big_domain.txt', 'r') as corpf:
         corp = corpf.read().decode('utf-8')
@@ -144,6 +145,7 @@ def calc_cvalue(sorted_phrase_dict, min_cvalue):
 
 def load_reference():
     """docstring for load_reference"""
+    #with open('input/new_terms.txt', 'r') as rf:  # new domain corpus
     with open('input/small_terms.txt', 'r') as rf:  # small corpus
     #with open('input/big_terms.txt', 'r') as rf:
         ref_raw = rf.read().decode('utf-8')
@@ -161,6 +163,13 @@ def generate_bins(item_list, num_bins):
         start_index = end_index
 
 
+def generate_bins_fixed_size(item_list, bin_size):
+    """docstring for generate_bins_fixed_size"""
+    bins = [item_list[x:x+bin_size] for x in
+            xrange(0, len(item_list), bin_size)]
+    return bins
+
+
 def precision_recall_stats(reference_list, sorted_test_list, num_bins):
     """docstring for precision_recall_stats"""
     ref_set = set(reference_list)
@@ -173,6 +182,19 @@ def precision_recall_stats(reference_list, sorted_test_list, num_bins):
         seg_pval = nltk.metrics.precision(ref_set, set(segment))
         print round(seg_pval, 2)
     print '=' * 4
+
+    #for segment in generate_bins_fixed_size(sorted_test_list, 1000):
+    #    seg_pval = nltk.metrics.precision(ref_set, set(segment))
+    #    print round(seg_pval, 2)
+    #print '=' * 4
+
+    # Cumulative precision for fixed sized bins
+    #cumulative_bins = []
+    #for segment in generate_bins_fixed_size(sorted_test_list, 1000):
+    #    cumulative_bins.extend(segment)
+    #    seg_pval = nltk.metrics.precision(ref_set, set(cumulative_bins))
+    #    print round(seg_pval, 2)
+    #print '=' * 4
 
     pval = nltk.metrics.precision(ref_set, test_set)
     rval = nltk.metrics.recall(ref_set, test_set)
@@ -256,6 +278,26 @@ def calc_ncvalue(cvalue_dict, tagged_sents, contextword_weight_dict,
     return ncvalue_dict
 
 
+def stoplist_filter(phrase_freq):
+    """docstring for stoplist_filter"""
+    filtered_phrase_freq = {}
+    with open('input/stoplist.txt') as sl_file:
+        text = sl_file.read().decode('utf-8')
+    stoplist = [l.strip().rsplit('/', 1)[0] for l in text.split('\n')]
+    for phrase in phrase_freq.keys():
+        has_stoplist_word = False
+        for word in stoplist:
+            if word + '/' in phrase:
+                has_stoplist_word = True
+        if has_stoplist_word is True:
+            pass
+        else:
+            filtered_phrase_freq[phrase] = phrase_freq[phrase]
+    print len(phrase_freq)
+    print len(filtered_phrase_freq)
+    return filtered_phrase_freq
+
+
 def run_experiment(phrase_pattern, min_freq, binom_cutoff,
                    min_cvalue, num_bins):
     """docstring for run_experiment"""
@@ -264,7 +306,9 @@ def run_experiment(phrase_pattern, min_freq, binom_cutoff,
     # STEP 2: Extract matching patterns above frequency threshold.
     phrase_freq = chunk_sents(sents, phrase_pattern, min_freq)
     # STEP 2: Remove chunks with words in stoplist (or binom ratio list).
+    #accepted_phrases = phrase_freq  # Al no usar binom. filtering.
     accepted_phrases = binom_ratio_filter(phrase_freq, binom_cutoff)[0]
+    #accepted_phrases = stoplist_filter(phrase_freq)
     # STEP 2: Remove POS tags from phrases.
     accepted_phrases = remove_dict_postags(accepted_phrases)
     # STEP 2: Order candidates first by number of words, then by frequency.
@@ -276,11 +320,13 @@ def run_experiment(phrase_pattern, min_freq, binom_cutoff,
     sorted_cval = sorted(
         cvalue_output.items(), key=lambda item: item[1], reverse=True)
     test = [k for k, v in sorted_cval]
-    #with open('candidatos.txt', 'w') as asd:
-    #    asd.write(
-    #        '\n'.join(
-    #            [str(round(x[1], 2))+'\t'+x[0].encode('utf-8')
-    #             for x in sorted_cval]))
+
+    with open('candidatos_cval.txt', 'w') as asd:
+        asd.write(
+            '\n'.join(
+                [str(round(x[1], 2))+'\t'+x[0].encode('utf-8')
+                 for x in sorted_cval]))
+
     print phrase_pattern.strip()
     print min_freq, binom_cutoff, min_cvalue
     stats = precision_recall_stats(reference, test, num_bins)
@@ -297,6 +343,13 @@ def run_experiment(phrase_pattern, min_freq, binom_cutoff,
     sorted_ncvalue = sorted(
         ncvalue_output.items(), key=lambda item: item[1], reverse=True)
     test = [k for k, v in sorted_ncvalue]
+
+    with open('candidadots_ncval.txt', 'w') as asd:
+        asd.write(
+            '\n'.join(
+                [str(round(x[1], 2))+'\t'+x[0].encode('utf-8')
+                 for x in sorted_ncvalue]))
+
     stats = precision_recall_stats(reference, test, num_bins)
     print
 
@@ -313,9 +366,14 @@ def main():
     #pattern = r"""
     #    TC: {<NC>+<AQ>*}
     #    """
+
+    # stoplist experiment
+    #pattern = r"""
+    #    TC: {<NC><AQ>*}
+    #    """
     min_freq = 1
-    binom_cutoff = 0.0
-    min_cvalue = 4.0
+    binom_cutoff = 2.0
+    min_cvalue = 0.0
     num_bins = 4
 
     run_experiment(pattern, min_freq, binom_cutoff,

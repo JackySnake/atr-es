@@ -12,7 +12,8 @@ import binom
 # Corpus consisting of list of real terms
 def load_terms():
     """docstring for load_terms"""
-    with open('input/small_terms.txt', 'r') as tf:
+    with open('input/new_terms.txt', 'r') as tf:
+    #with open('input/small_terms.txt', 'r') as tf:
         terms_raw = tf.read().decode('utf-8')
     tagged_terms = terms_raw.split('\n')
     return tagged_terms
@@ -113,7 +114,8 @@ def make_general_model(tagged_general):
 # Corpus from which to extract candidates
 def load_analysis():
     """docstring for load_analysis"""
-    with open('input/small_domain.txt', 'r') as corpf:  # small corpus
+    with open('input/new_domain.txt', 'r') as corpf:
+    #with open('input/small_domain.txt', 'r') as corpf:  # small corpus
         corp = corpf.read().decode('utf-8')
     tagged_sents = [s.strip()+' ./Fp' for s in corp.split('./Fp')]
     tagged_sents = [s.split() for s in tagged_sents]
@@ -379,7 +381,8 @@ def main():
         # Binom filter
         #TODO: min_nazar_val
         binom_cutoff = 1.5
-        accepted_phrases = binom_ratio_filter(chunk_freq_dict, binom_cutoff)[0]
+        #accepted_phrases = binom_ratio_filter(chunk_freq_dict, binom_cutoff)[0]
+        accepted_phrases = chunk_freq_dict  # DONT USE BINOM FILTERING
 
         for candidate in accepted_phrases.keys():
             cand_freq = chunk_freq_dict[candidate]
@@ -388,11 +391,13 @@ def main():
             candidate_coef = cand_freq * syn_coef * lex_coef * morph_coef
             candidate_scores.append((candidate_coef, candidate),)
     candidate_scores = sorted(candidate_scores, reverse=True)
+    with open('candidatos_nazar.txt', 'w') as cnf:
+        cnf.write('\n'.join('%s\t%s' % (x[1].encode('utf-8'), round(x[0], 2)) for x in candidate_scores))
 
     # Test on all terms
-    #no_tags_term_corp = [remove_str_postags(s) for s in term_corp]
+    no_tags_term_corp = [remove_str_postags(s) for s in term_corp]
     # Test on other (not training) terms
-    no_tags_term_corp = [remove_str_postags(s) for s in term_test]
+    #no_tags_term_corp = [remove_str_postags(s) for s in term_test]
     no_tags_candidates = [remove_str_postags(c[1]) for c in candidate_scores]
     print 'binom cutoff:', binom_cutoff
     precision_recall(no_tags_term_corp, no_tags_candidates, 4)
